@@ -1,0 +1,11 @@
+DOCUMENT = math-cs
+
+document : $(DOCUMENT).tex
+	pdflatex $(DOCUMENT).tex
+	bibtex $(DOCUMENT).aux
+	pdflatex $(DOCUMENT).tex
+	pdflatex $(DOCUMENT).tex
+
+clean :
+	rm -f *.aux *.bbl *.log *.out *.toc *.blg *~ *.pdf
+

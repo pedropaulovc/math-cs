@@ -90,35 +90,19 @@ Email: giuliano.olguin@gmail.com}}
 	enlargelimits=0.15,
 	legend style={at={(0.5,-0.15)},
 		anchor=north,legend columns=-1},
-	ybar,
+	xbar,
 	bar width=7pt,
 ]
 \addplot
 	coordinates {(1930,50e6) (1940,33e6)
 		(1950,40e6) (1960,50e6) (1970,70e6)};
-\addplot
-	coordinates {(1930,38e6) (1940,42e6)
-		(1950,43e6) (1960,45e6) (1970,65e6)};
-\addplot
-	coordinates {(1930,15e6) (1940,12e6)
-		(1950,13e6) (1960,25e6) (1970,35e6)};
 \addplot[red,sharp plot,]
 	coordinates {(1910,4.3e7) (1990,4.3e7)}
 	node[above] at (axis cs:1950,4.3e7) {Houses};
-\legend{Far,Near,Here,Annot}
+\legend{Far,Annot}
 \end{axis}
 \end{tikzpicture}
 
-\begin{tikzpicture}
-\begin{axis}[xbar stacked]
-\addplot
-	coordinates {(1,0) (2,1) (2,2) (3,3)};
-\addplot
-	coordinates {(1,0) (2,1) (2,2) (3,3)};
-\addplot
-	coordinates {(1,0) (2,1) (2,2) (3,3)};
-\end{axis}
-\end{tikzpicture}
 
 	For this paper, are considered Math disciplines those that address the areas of Calculus, Linear Algebra, Vectors, Geometry and Algebra. These subjects are usually taught by the Universities Mathematics departments. A difficulty is that in some cases the names of the courses, or their syllabi, do not represent what is actually taught. All curricular material was read and classifications were created to select what in fact can be identified as Mathematics.
 
@@ -135,17 +119,17 @@ Table 1 presents the general panorama of the 10 universities indicating their si
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
         University         & Total credits  & Total hours & Period           & Graduation (years) & Students per year \\ \hline
-        IME/USP \cite{ime} & 199            & 2985        & Diurnal           & 4               & 50                   \\ 
-        PUC-RS \cite{pucrs}& ....           & ....        & Nocturnal           & 4               & 60                   \\ 
-        UFC \cite{ufc}     & ...            & ....        & ... & ...               & ..                   \\ 
-        UFCG \cite{ufcg}   & 208            & 3120        & Diurnal           & 4               & 90                   \\ 
-        UFMG \cite{ufmg}   & 175            & 2625        & Diurnal           & 4               & 80                   \\ 
-        UFPE \cite{ufpe}   & 233            & 3495        & Diurnal           & 4.5             & 100                  \\ 
-        UFRGS \cite{ufrgs} & 196            & 3240        & Diurnal           & 4.5             & 100                  \\ 
-        UFRJ \cite{ufrj}   & 195            & 3075        & Diurnal           & 4.5             & 50                   \\ 
-        UFSC \cite{ufsc}   & 196            & 3528        & Diurnal           & 4               & 100                  \\ 
-        UNICAMP \cite{unicamp}& 200         & 3000        & Nocturnal          & 5               & 50                   \\ 
-        ICMC/USP \cite{icmc}& 293           & 4395        & Diurnal           & 5               & 100                  \\ 
+        IME/USP \cite{ime} & 199            & 2985        & Diurnal          & 4               & 50                   \\ 
+        PUC-RS \cite{pucrs}& ....           & ....        & Nocturnal        & 4               & 60                   \\ 
+        UFC \cite{ufc}     & ...            & ....        & ...              & ...             & ..                   \\ 
+        UFCG \cite{ufcg}   & 208            & 3120        & Diurnal          & 4               & 90                   \\ 
+        UFMG \cite{ufmg}   & 175            & 2625        & Diurnal          & 4               & 80                   \\ 
+        UFPE \cite{ufpe}   & 233            & 3495        & Diurnal          & 4.5             & 100                  \\ 
+        UFRGS \cite{ufrgs} & 196            & 3240        & Diurnal          & 4.5             & 100                  \\ 
+        UFRJ \cite{ufrj}   & 195            & 3075        & Diurnal          & 4.5             & 50                   \\ 
+        UFSC \cite{ufsc}   & 196            & 3528        & Diurnal          & 4               & 100                  \\ 
+        UNICAMP \cite{unicamp}& 200         & 3000        & Nocturnal        & 5               & 50                   \\ 
+        ICMC/USP \cite{icmc}& 293           & 4395        & Diurnal          & 5               & 100                  \\ 
         SBC \cite{sbc}     & 160            & 2400        & N/A              & 4               & N/A                  \\ 
         SBC \cite{sbc}     & 200            & 3000        & N/A              & 5               & N/A                  \\ 
         ACM \cite{cs2008}  & 280            & 4200        & N/A              & 4               & N/A                  \\
@@ -153,46 +137,46 @@ Table 1 presents the general panorama of the 10 universities indicating their si
     \end{tabular}
 \end{table*}
 
-	Nota-se que a maioria dos cursos são Diurnals (Integrais), com duração entre 4 e 4,5 anos. É importante notar que a relação entre um crédito e as respectivas horas de aula varia entre universidades. Há cursos como os da da USP e o currículo de referência da ACM que consideram que um crédito equivale a 15 horas de aula, já o da UFSC, por exemplo, adota a relação 1 crédito = 18 horas. O currículo referência da SBC não indica qual é a relação adotada e assim os autores optaram por considerar o valor de 15 horas para fins de comparação.
+	It can be seen that most programs are diurnals (Full-time), lasting between 4 and 4.5 years. It is important to notice that the relationship between a credit and its lecture hours varies between universities. There are programs like USP and the ACM/IEEE reference curriculum that consider a credit is equal to 15 hours, on the other side, UFSC, for example, adopts the ratio 1 credit = 18 hours. The SBC curriculum does not indicate what is relation is adopted and so the authors chose to consider the value of 15 hours for comparison purposes.
 
-	Na composição dos totais apresentados na tabela acima foram descritas as quantidades mínimas necessárias para a integralização curricular completa, abarcando créditos de disciplinas optativas e/ou estágios obrigatórios quando existem. 
+	In Table I, the totals shown correspond to the minimum lecture hours necessary to acheive graduation, including elective disciplines or mandatory internships when they exist.
+	
+	Analyzing the total hours column we can see that there is a great variability in the amount required by the curricula of different universities. On average 3177h are required ($ \sigma = 554h $) for 4 years programs, 3270 hours ($ \sigma = 211h $) for 4.5 years programs and 3465 h ($ \sigma = ***h $) for 5 years programs.
 
-	Analisando a coluna de total de horas podemos perceber que há uma grande variabilidade na quantidade exigida pelos currículos das diferentes universidades. Em média são exigidas 3177 h ($\sigma = 554 h $) para cursos de 4 anos, 3270 horas ($\sigma = 211 h$) para cursos de 4,5 anos e 3465 h ($\sigma = **** h$) para cursos de 5 anos.
+	Table 2 deals with the Mathematics disciplines. Here we can see a great diversity in the workload allocation to the subject in Brazilian CS curricula. Here, universities have an average of 15.6\% ($ \sigma = 4.77\% $) of disciplines exclusively in this area.
 
-	A tabela 2 trata especificamente dos conteúdos de Matemática. Aqui percebe-se uma grande diversidade na carga horária reservada a Matemática nos currículos dos cursos de Computação pelo Brasil. Aqui, as universidades possuem em média 15,6\% ($\sigma = 4,77 \%$) de disciplinas exclusivamente de desta área.
-
-	Ainda, notamos que ao compararmos cada universidade com o currículo de referência da ACM (Que afirma ser o mínimo necessário para a cobertura do tópico) podemos verificar que 5 cursos possuem carga de Matemática maior ou igual que o recomendado e 6 cursos possuem menos. Isso corrobora a visão dos autores citados anteriormente que afirmam que Matemática é uma disciplina em decadência nos cursos de Computação.
+	Still, we note that when comparing each university curriculum with IEEE/ACM reference (which claims to be the minimum necessary to cover the topic) we can see that load of 5 courses have Mathematics greater or equal than the recommended and 6 programs have less. This corroborates the authors' point of view cited above who claim that Mathematics is a discipline in decline in CS programs.
 
 \begin{table}
 	\centering
-	\caption{Some Typical Commands}
+	\caption{Math coverage in Brazilian CS curricula}
     \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|}
         \hline
-        Universidade & Créditos Totais em Matemática       & Créditos Percentuais em Matemática        \\ \hline
+        University & Total Math Credits                    & Percentage of Math in curriculum          \\ \hline
         IME/USP      & 50                                  & 25,10\%                                   \\ 
         UNICAMP      & 35                                  & 17,40\%                                   \\ 
         UFMG         & 19                                  & 10,80\%                                   \\ 
         UFRGS        & 24                                  & 12,00\%                                   \\ 
         UFRJ         & 31                                  & 21,20\%                                   \\ 
-        PUC-RJ       & 22                                  & 10,20\%                                   \\ 
+        PUC-RS       & ..                                  & .....\%                                   \\ 
         ICMC/USP     & 36                                  & 16,50\%                                   \\ 
         UFPE         & 25                                  & 10,70\%                                   \\ 
-        UFBA         & 32                                  & 16,20\%                                   \\ 
+        UFC          & ..                                  & .....\%                                   \\ 
         UFSC         & 21                                  & 12,20\%                                   \\ 
         UFCG         & 28                                  & 13,40\%                                   \\ 
-        SBC (4 anos) & 30                                  & 5,30\%                                    \\ 
+        SBC (4 years)& 30                                  & 5,30\%                                    \\ 
         ACM          & 43                                  & 15,30\%                                   \\
         \hline
     \end{tabular}
 \end{table}
 
-\section{Conclusões}
-	Neste artigo foi possível ver primeiramente como as disciplinas de Matemática são de grande importância para um futuro bacharel em Ciência da Computação. Foi visto que tal disciplina é uma base, que precisa ser sólida, para o desenvolvimento de tópicos mais avançados que se baseiam nela. Ainda, diversos educadores na área de Computação com artigos publicados em eventos de repercussão internacional compartilham desta tese.
-	
-	Por outro lado, foi constatado que esta área está sofrendo uma decadência em sua relevância, em parte pelo surgimento de diversas novas tendências no mercado de Computação que são absorvidas nos currículos dos cursos de graduação.
-	
-	Por fim, foi feita uma análise da situação atual da ênfase dada a Matemática nos currículos de 11 universidades brasileiras através de análises da carga horária absoluta e relativa. Foi constatado que mais de 50\% das universidades pesquisadas possuem uma carga menor que o recomendado pela ACM em seu currículo de referência.
+\section{Conclusions}
+	In this paper it was possible to see how Mathematics disciplines are of great importance for a future graduate in Computer Science. It was presented that such subject is a base which needs to be robust to the development of more advanced topics which are based on it. Besides, many educators in the area of Computing with articles published in international events share that view.
 
+	Moreover, it was noted that this area is experiencing a decline in its relevance, in part by the emergence of several new trends in the market that are absorbed in undergraduate curricula.
+	
+	Finally, an analysis of the current emphasis on Mathematics in 11 Brazilian CS curricula from 10 different universities was conducted through the study of absolute and relative workload in the area. It was found that more than 50 \% of the programs surveyed have a lower load than recommended by ACM reference curriculum.
+	
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
 % For figures, \caption should occur after the \includegraphics.

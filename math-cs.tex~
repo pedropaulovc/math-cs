@@ -141,7 +141,7 @@ Table 1 presents the general panorama of the 10 universities indicating their si
 
 	In Table I, the totals shown correspond to the minimum lecture hours necessary to acheive graduation, including elective disciplines or mandatory internships when they exist.
 	
-	Analyzing the amount of hours column we can see that there is a great variability in the amount required by the curricula of different universities. On average 3177h are required ($ \sigma = 554h $) for 4 years programs, 3270 hours ($ \sigma = 211h $) for 4.5 years programs and 3465 h ($ \sigma = ***h $) for 5 years programs.
+	Analyzing the total hours column we can see that there is a great variability in the amount required by the curricula of different universities. On average 3177h are required ($ \sigma = 554h $) for 4 years programs, 3270 hours ($ \sigma = 211h $) for 4.5 years programs and 3465 h ($ \sigma = ***h $) for 5 years programs.
 
 	Table 2 deals with the Mathematics disciplines. Here we can see a great diversity in the workload allocation to the subject in Brazilian CS curricula. Here, universities have an average of 15.6\% ($ \sigma = 4.77\% $) of disciplines exclusively in this area.
 

@@ -1,0 +1,61 @@
+The recent growth of different courses in higher education is worsening the university identity crisis. Since the universities foundation on 13th century, its role has varied according to the political context on the local society, basically presenting values related to national issues. Nevertheless, has persisted the existence of two orthogonal tendencies: The university duty should be solving the society current demands; The another one is that the university mission is be a guidance, looking to the future. The present problem is we have courses that address immediate employability as other ones that aim to prepare professionals who know how to deal with problems will arise in the future. It is so difficult merge these two skills.
+
+For Renato Janine, there is some volatile knowledge, usually the technical ones, that must be taught by employers. In other words, "The young better deal with what will last and, getting a solid basis in higher school time, instead of worrying about details that changes constantly".
+
+The university shall provide the necessary basis for after the students get graduate they be able to adapt to the many different standards used in the companies when they are working.  Hence, university shall neither focus different kinds of procedures established in the labor market nor teaching techniques to deal with some specific technical issues in the career. It has to prepare the students to deal with any problems and also any kind of procedures anytime, either present or future.
+
+After all, the procedures may vary not only from company to company as they also changes as the time goes. So, the graduate professional would not be prepared to the future and only could adapt to companies that bring problems it is used to deal with and these people just is skilled in some specific techniques in the work. It may note this fact through the fast softwares development which implies in a constant learning of its manipulation, that turn useless some previously acquired knoweledge. 
+
+Therefore, it is obvious that theory and the fundamentals are imperative for this kind of education and they can not be replaced by practical or technical skills. After all, the fundamentals bring the skills to deal with a issue and apply the abstract ideas to solve it. This issue is so common in courses that involve technology, as engineering which profession is still regulated by guildlike institutions.  
+
+That is a common point present in almost all curriculum which technological courses are the math fundamentals. Those ones which just have basic content fitextremely well in Renato Janine's definition which one he has came up with to talk about the tasks in the university. According to Anthony Ralphson, math develops the mind and "improve the student learning skills".
+
+In other hand, such Ralphson as Kelemen et al are emphatic saying that the way math is taught in undergraduate courses in American universities, more specifically Bachelor in Computer Science (BCS) ,affects the development of students learning.
+
+
+
+
+8)	Um importante fato detectado por diversos dos trabalhos analisados ([Ralphson], [Tucker]) é que uma análise do currículo de referência fornecido pela Association for Computing Machinery (ACM) indica que o papel da Matemática vem decaindo gradativamente desde pelo menos a década de 1960, apesar de com menor velocidade nos anos atuais.
+9)	Esse cenário é tido como ruim, pois para estudantes de Ciência da Computação/Engenharia de Software, em particular, matemática é importante porque o raciocínio logico inerente a todo pensamento matemático é muito similar ao pensamento lógico necessário no desenvolvimento de software [Ralphson]. Na elaboração de projetos e implementação de softwares o formado precisa desenvolver maneiras efetivas de solucionar problemas computacionais e a quantidade de matemática utilizada no cotidiano de um programador geralmente aumenta quando as estruturas construídas utilizam uma linguagem mais formal.” [ComputingCurricula2005]
+10)	Segundo [Klemen], “estudantes de Ciência da Computação devem ser capazes de modelar problemas do ‘mundo real’ precisamente utilizando matemática e representar situações utilizando estruturas como vetores, listas ligadas, árvores, grafos finitos e matrizes. Eles devem ser capazes de desenhar e analisar algoritmos que transformam tais estruturas [...], compreender a natureza de um modelo matemático e relacionar modelos matemáticos a domínios de problemas reais [...]. Estratégias de solução de problemas tais como divisão-e-conquista e backtracking são também essenciais”.
+
+METODOLOGIA
+
+11)	O presente trabalho faz um estudo comparativo dos diferentes cursos de Ciência da Computação através de uma comparação quantitativa no número de créditos-aula que são ministrados na área de Matemática tanto em valores absolutos quanto em valores relativos ao total de créditos-aula da graduação. O objetivo principal é identificar se os cursos selecionados tem mais ou menos ênfase em Matemática em comparação com a ACM. 
+12)	É importante ressaltar que uma avaliação quantitativa da carga horária permite uma classificação objetiva dos cursos analisados, por outro lado, pode ser pouco efetiva na análise das diferentes facetas que a Matemática se apresenta em cursos de graduação em Computação, como por exemplo a ênfase de um determinado curso na área de Matemática Contínua (Cálculo) ou Discreta (Álgebra).
+13)	São considerados cursos de Matemática disciplinas que abordam as áreas do Cálculo, Álgebra Linear, Geometria, Vetores e Álgebra. Tais disciplinas são ministradas habitualmente pelos departamentos de Matemática das faculdades. A dificuldade é que em alguns casos os nomes das disciplinas, ou as próprias ementas, não representam o que de fato é ensinado. Todo o material curricular foi lido e classificações foram criadas para selecionar o que fato pode ser identificado como Matemática. 
+14)	Os onze cursos de graduação em Ciência da Computação estudados foram escolhidos tendo como critério o fato de serem cursos de relevância nacional no Brasil na área de Computação, com resultados expressivos em rankings de avaliação de curso como o NOME COMPLETO ENADE em 2008 (por referencia)
+15)	Um efeito colateral dessa escolha é que a maior parte dos programas estudados é de universidades públicas, o que deve ser levado em conta na análise dos dados uma vez que estes podem possuir ênfases diferenciadas na quantidade e abordagem de disciplinas de fundamentos (Matemática principalmente) em comparação a universidades particulares.
+
+DADOS
+
+A tabela 1 apresenta o panorama geral das 11 universidades indicando seu tamanho e características do curso.
+
+16) TABELA 1.
+
+17)	Nota-se que a maioria dos cursos são diurnos (Integrais), com duração entre 4 e 4,5 anos. É importante notar que a relação entre um crédito e as respectivas horas de aula varia entre universidades. Há cursos como os da da USP e o currículo de referência da ACM que consideram que um crédito equivale a 15 horas de aula, já o da UFSC, por exemplo, adota a relação 1 crédito = 18 horas. O currículo referência da SBC não indica qual é a relação adotada e assim os autores optaram por considerar o valor de 15 horas para fins de comparação.
+18)	Na composição dos totais apresentados na tabela acima foram descritas as quantidades mínimas necessárias para a integralização curricular completa, abarcando créditos de disciplinas optativas e/ou estágios obrigatórios quando existem. 
+19)	Analisando a coluna de total de horas podemos perceber que há uma grande variabilidade na quantidade exigida pelos currículos das diferentes universidades. Em média são exigidas 3177 h (σ = 554 h) para cursos de 4 anos, 3270 horas (σ = 211 h) para cursos de 4,5 anos e 3465 h (σ = 554 h) para cursos de 5 anos.
+20)	A tabela 2 trata especificamente dos conteúdos de Matemática. Aqui percebe-se uma grande diversidade na carga horária reservada a Matemática nos currículos dos cursos de Computação pelo Brasil. Aqui, as universidades possuem em média 15,6% (σ = 4,77 %) de disciplinas exclusivamente desta área.
+21)	Ainda, notamos que ao compararmos cada universidade com o currículo de referência da ACM (Que afirma ser o mínimo necessário para a cobertura do tópico) podemos verificar que 5 cursos possuem carga de Matemática maior ou igual que o recomendado e 6 cursos possuem menos. Isso corrobora a visão dos autores citados anteriormente que afirmam que Matemática é uma disciplina em decadência nos cursos de Computação.
+
+22) TABELA 2.
+
+Universidade
+Total absoluto de Créditos/horas em matemática
+Total em percentual de Créditos/horas em matemática
+IME/USP
+
+
+
+23)	O gráfico 1 apresenta uma comparação entre as 11 universidades, onde a linha que cruza o gráfico é o recomendado pela ACM, 
+
+GRÁFICO 1.  Apontar linha de corte da ACM
+
+24) Fig. 3   Comparação quantitativa de créditos de disciplinas matemáticas das 11 faculdades
+         Observa-se que X das 11 universidades estão abaixo do recomendado pela ACM. O pior indice é o da Univerdade ___ que está Y% abaixo do esperado. Já a universidade ___ disponta das demais e está W% acima da ACM.
+
+CONCLUSÕES
+25)	Neste artigo foi possível ver primeiramente como as disciplinas de Matemática são de grande importância para um futuro bacharel em Ciência da Computação. Foi visto que tal disciplina é uma base, que precisa ser sólida, para o desenvolvimento de tópicos mais avançados que se baseiam nela. Ainda, diversos educadores na área de Computação com artigos publicados em eventos de repercussão internacional compartilham desta tese.
+26)	Por outro lado, foi constatado que esta área está sofrendo uma decadência em sua relevância, em parte pelo surgimento de diversas novas tendências no mercado de Computação que são absorvidas nos currículos dos cursos de graduação.
+27)	Por fim, foi feita uma análise da situação atual da ênfase dada a Matemática nos currículos de 11 universidades brasileiras através de análises da carga horária absoluta e relativa. Foi constatado que mais de 50% das universidades pesquisadas possuem uma carga menor que o recomendado pela ACM em seu currículo de referência.

@@ -50,7 +50,7 @@ Email: giuliano.olguin@gmail.com}}
 
     Since 1960, the importance of mathematics in Computer Science (CS) undergraduate curricula has been decreasing, particularly, because new fields in CS have risen and they were assimilated in the curricula. Despite of reduction, mathematics still have its role in CS's curricula.
 
-    The goal of this paper is to analyze the amount of the courses related to mathematics in different CS undergraduate curricula. In this work are analyzed the lecture hour load dedicated to mathematics courses on ten Brazilian CS undergraduate programs: The Federal Universities of Ceará, Minas Gerais, Campina Grande, Pernambuco, Rio de Janeiro, Rio Grande do Sul and Santa Catarina, State Universities of São Paulo and Campinas and the Pontifical Catholic University of Rio Grande do Sul. These programs were selected among others due their 5-stars rating in the Guia do Estudante 2012 Ranking, published by Editora Abril.
+    The goal of this paper is to analyze the amount of the courses related to mathematics in different CS undergraduate curricula. In this work are analyzed the lecture hour load dedicated to mathematics courses on eleven Brazilian CS undergraduate programs: The Federal Universities of Ceará, Minas Gerais, Campina Grande, Pernambuco, Rio de Janeiro, Rio Grande do Sul and Santa Catarina, State Universities of São Paulo (two programs) and Campinas and the Pontifical Catholic University of Rio Grande do Sul. These programs were selected among others due their 5-stars rating in the Guia do Estudante 2012 Ranking, published by Editora Abril.
 
     To allow this comparison, it was established a definition of what was considered a lecture hour of mathematics. For a reference point, such programs were compared with two reference curricula in the area: The Brazilian Computer Society (SBC) and the Computer Science Curriculum 2008 made by the IEEE Computer Society and Association for Computing Machinery (ACM) joint task force.
 
@@ -86,7 +86,7 @@ influences practice.''
 \section{Methodology}
 	This paper makes a comparative study of different Brazilian Computer Science programs through a quantitative comparison of the number of lecture hours in the area of mathematics both in absolute and in relative values to the total hours required for graduation. The main goal is to identify whether the selected courses have more or less emphasis on mathematics compared with two reference curricula in the area, the Brazilian Computer Society (SBC) \cite{sbc} and the Computer Science Curriculum 2008 (CS2008) made by the IEEE Computer Society and the Association for Computing Machinery (ACM) joint task force \cite{cs2008}.
 
-	It is important to point out, that a quantitative assessment of the hour load allows an objective classification of studided programs, on the other hand, may be less effective in analyzing the different facets that mathematics is presented in CS undergraduate courses, such as the emphasis of a particular program in the area of continuous (Calculus) or discrete mathematics (Algebra, logic, etc).
+	It is important to point out, that a quantitative assessment of the hour load allows an objective classification of studided programs, on the other hand, may be less effective in analyzing the different facets that mathematics is presented in CS undergraduate courses, such as the emphasis of a particular program in the area of continuous (Calculus) or discrete mathematics (Algebra, for example).
 
 	The task of isolating covered topics or areas in different curricula, such as mathematics in this paper, for comparison purposes is on one hand very important as it enables objective analysis on the other hand is difficult to be done as different curricula have their own peculiarities. This is one of the challenges faced by accreditation organizations such as the European Network for Accreditation of Engineering Education (ENAEE), Accreditation Board for Engineering and Technology, Inc. (ABET) and the Asociación Iberoamericana de Instituciones de Enseñanza de la Ingeniería (ASIBEI). All of them are responsible for certifying that different Engineering curricula satisfy a common body of knowledge in order to facilitate students exchanges.
 	
@@ -99,7 +99,7 @@ influences practice.''
 	enlargelimits=0.15,
 	legend style={at={(0.5,-0.15)},
 	anchor=north,legend columns=-1},
-	ylabel={\% Percentage of math in curriculum},
+	ylabel={\% of math in core curriculum},
 	symbolic x coords={pre,ICMC/USP,IME/USP,PUC-RS,UFC,UFCG,UFMG,UFPE,UFRGS,UFRJ,UFSC,UNICAMP,pos},
 	xtick=data,
 %	nodes near coords,
@@ -108,55 +108,64 @@ influences practice.''
 	]
 	
 	\addplot 
-		coordinates {(ICMC/USP,12.29) (IME/USP,25.13) (PUC-RS,7.88) (UFC,10.24) (UFCG,13.46) (UFMG,10.86) (UFPE,10.73) (UFRGS,12.24) (UFRJ,15.90) (UFSC,10.71) (UNICAMP,17.50)};
+		coordinates {(ICMC/USP,13.69) (IME/USP,27.03) (PUC-RS,10.87) (UFC,16.34) (UFCG,16.87) (UFMG,25.17) (UFPE,12.10) (UFRGS,13.95) (UFRJ,21.33) (UFSC,15.61) (UNICAMP,23.61)};
 	\addplot[red,sharp plot]
-		coordinates {(pre,15.36) (pos,15.36)}
-		node[above] at (axis cs:UFMG,15.36) {ACM};
+		coordinates {(pre,13.93) (pos,13.93)}
+		node[above] at (axis cs:UFMG,13.93) {ACM};
 	\addplot[red,sharp plot]
 		coordinates {(pre,18.75) (pos,18.75)}
 		node[above] at (axis cs:UFMG,18.75) {SBC};
 \end{axis}
 \end{tikzpicture}
-\caption{The proportion of mathematics in each curriculum compared with the reference curricula}
+\caption{The proportion of mathematics in the core of each curriculum compared with the reference curricula}
 \end{figure}
 
 	For this paper, are considered math disciplines those that address the areas of Calculus, Linear Algebra, Vectors, Geometry and Algebra. These subjects are usually taught by the Universities mathematics departments. A difficulty is that in some cases the names of the courses, or their syllabi, do not represent what is actually taught. All curricular material was read and classifications were created to select what in fact can be identified as mathematics.
 
 	The ten Brazilian CS undergraduate programs studied were selected among other due to their 5-stars rating according to the Guia do Estudante 2012 Ranking, published by Editora Abril. \cite{guia_estudante} The list comprehends the Federal Universities of Ceará (UFC), Minas Gerais (UFMG), Campina Grande (UFCG), Pernambuco (UFPE), Rio de Janeiro (UFRJ), Rio Grande do Sul (UFRGS) and Santa Catarina (UFSC), State Universities of São Paulo (USP) and Campinas (UNICAMP) and the Pontifical Catholic University of Rio Grande do Sul (PUC-RS). USP is further sub-divided in two distinct CS programs, the one held at the Institute of Mathematics and Statistics (IME/USP) and the other held at the Institute of Mathematical Sciences and Computing (ICMC/USP).
 	
-	A side effect of this choice is that most of the programs studied are held by public universities, which must be taken into account in the data analysis since they may have different emphases in the quantity and approach in fundamentals disciplines (especially mathematics) in comparison to private universities.
+	It can be seen that most programs are diurnals (Full-time), lasting between 4 and 4.5 years. It is important to notice that the relationship between a credit and its lecture hours varies between universities. There are programs like USP and the ACM/IEEE reference curriculum that consider a credit is equal to 15 hours, on the other side, UFSC, for example, adopts the ratio 1 credit = 18 hours. The SBC curriculum does not indicate what is relation is adopted and so the authors chose to consider the value of 15 hours for comparison purposes.
 	
+	A side effect of this choice is that most of the programs studied are held by public universities, which must be taken into account in the data analysis since they may have different emphases in the quantity and approach in fundamentals disciplines (especially mathematics) in comparison to private universities.
+
+\section{Reference Curricula}
+	As pointed out previously, brazilian CS programs have their curricular contents mainly guided by two reference curricula. In an international level by the ACM/IEEE Computer Science Curriculum which current revision is from 2008 (CS2008) \cite{cs2008} and in a country level by the Brazilian Computer Society Curricular Reference from 2005 \cite{sbc}.
+	
+	O primeiro currículo aborda apenas conteúdos intimamente ligados à Ciência da Computação. Internamente, ele é subdividido em três granularidades, da maior para a menor: knowledge areas, knowledge units e learning objectives. A knowledge area Discrete Structures (DS) é a única que se encaixa (parcialmente) na definição de matemática. Mais especificamente, DS possui as seguintes knowledge units: Functions Relations and Sets, Basic Logic, Proof Techniques, Basics of Counting, Graphs and Trees e Discrete Probability. Destas, segundo a definição de disciplinas de matemática utilizada neste artigo foram contabilizadas apenas as quatro primeiras. Não há menções sobre as exigências por exemplo de Cálculo, Álgebra Linear ou Equações Diferenciais que devem ser estudados de maneira a embasar os estudos dos alunos em disciplinas avançadas.
+	
+	Segundo o CS2008, são necessárias 280 lecture hours para abranger todo o currículo obrigatório, destas, 
+	subdivide os conceitos a serem estudados em 14 knowledge areas. Ainda, afirma que para a cobertura integral dos conteúdos são necessárias pelo menos 280 lecture hours. 
+
 \section{Data}
 Table 1 presents the general panorama of the 10 universities indicating their size and course characteristics.
 
+
 \begin{table}
 	\centering
-	\caption{Studied CS programs panorama}
+	\caption{Studied CS Programs Panorama}
     \begin{tabular}{|c|c|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|}
         \hline
-        University             & Total hours & Period     & Graduation (years) & Students per year \\ \hline
+        University             & Period     & Graduation (years) & Students per year \\ \hline
         \rowcolor[gray]{.9}
-        ACM \cite{cs2008}      & 280         & N/A        & 4               & N/A                  \\
+        ACM \cite{cs2008}      & N/A        & 4               & N/A                  \\
         \rowcolor[gray]{.9}
-        SBC \cite{sbc}         & 2400        & N/A        & 4               & N/A                  \\ 
+        SBC \cite{sbc}         & N/A        & 4               & N/A                  \\ 
         \rowcolor[gray]{.9}
-        SBC \cite{sbc}         & 3000        & N/A        & 5               & N/A                  \\ 
-        ICMC/USP \cite{icmc}   & 4395        & Diurnal    & 5               & 100                  \\ 
-        IME/USP \cite{ime}     & 2985        & Diurnal    & 4               & 50                   \\ 
-        PUC-RS \cite{pucrs}    & 3045        & Nocturnal  & 4               & 60                   \\ 
-        UFC \cite{ufc}         & 3280        & Diurnal    & 4               & 60                   \\ 
-        UFCG \cite{ufcg}       & 3120        & Diurnal    & 4               & 90                   \\ 
-        UFMG \cite{ufmg}       & 2625        & Diurnal    & 4               & 80                   \\ 
-        UFPE \cite{ufpe}       & 3495        & Diurnal    & 4.5             & 100                  \\ 
-        UFRGS \cite{ufrgs}     & 3240        & Diurnal    & 4.5             & 100                  \\ 
-        UFRJ \cite{ufrj}       & 3075        & Diurnal    & 4.5             & 50                   \\ 
-        UFSC \cite{ufsc}       & 3528        & Diurnal    & 4               & 100                  \\ 
-        UNICAMP \cite{unicamp} & 3000        & Nocturnal  & 5               & 50                   \\ 
+        SBC \cite{sbc}         & N/A        & 5               & N/A                  \\ 
+        ICMC/USP \cite{icmc}   & Diurnal    & 5               & 100                  \\ 
+        IME/USP \cite{ime}     & Diurnal    & 4               & 50                   \\ 
+        PUC-RS \cite{pucrs}    & Nocturnal  & 4               & 60                   \\ 
+        UFC \cite{ufc}         & Diurnal    & 4               & 60                   \\ 
+        UFCG \cite{ufcg}       & Diurnal    & 4               & 90                   \\ 
+        UFMG \cite{ufmg}       & Diurnal    & 4               & 80                   \\ 
+        UFPE \cite{ufpe}       & Diurnal    & 4.5             & 100                  \\ 
+        UFRGS \cite{ufrgs}     & Diurnal    & 4.5             & 100                  \\ 
+        UFRJ \cite{ufrj}       & Diurnal    & 4.5             & 50                   \\ 
+        UFSC \cite{ufsc}       & Diurnal    & 4               & 100                  \\ 
+        UNICAMP \cite{unicamp} & Nocturnal  & 5               & 50                   \\ 
         \hline
     \end{tabular}
 \end{table}
-
-	It can be seen that most programs are diurnals (Full-time), lasting between 4 and 4.5 years. It is important to notice that the relationship between a credit and its lecture hours varies between universities. There are programs like USP and the ACM/IEEE reference curriculum that consider a credit is equal to 15 hours, on the other side, UFSC, for example, adopts the ratio 1 credit = 18 hours. The SBC curriculum does not indicate what is relation is adopted and so the authors chose to consider the value of 15 hours for comparison purposes.
 
 	In Table I, the totals shown correspond to the minimum lecture hours necessary to acheive graduation, including elective disciplines or mandatory internships when they exist.
 
@@ -169,25 +178,51 @@ Table 1 presents the general panorama of the 10 universities indicating their si
 
 \begin{table}
 	\centering
-	\caption{math coverage in Brazilian CS curricula}
-    \begin{tabular}{|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|}
+	\caption{Math Coverage in Brazilian CS Curricula}
+    \begin{tabular}{|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|}
         \hline
-        University               & Total math hours & Percentage of math in curriculum          \\ \hline
+        University               & Total math hours  & Total core hours & Percentage of math in curriculum          \\ \hline
+        \rowcolor[gray]{.9}
+        ACM \cite{cs2008}        & 39                & 280              & 13.93\%                          \\ 
 		\rowcolor[gray]{.9}
-        ACM \cite{cs2008}        & 43             & 15.36\%                                   \\
+        SBC (4 years) \cite{sbc} & 450               & 2400             & 18.75\%                          \\ 
+        ICMC/USP \cite{icmc}     & 540               & 3945             & 13.69\%                          \\ 
+        IME/USP \cite{ime}       & 750               & 2775             & 27.03\%                          \\ 
+        PUC-RS \cite{pucrs}      & 300               & 2760             & 10.87\%                          \\ 
+        UFC \cite{ufc}           & 400               & 2448             & 16.34\%                          \\ 
+        UFCG \cite{ufcg}         & 420               & 2490             & 16.87\%                          \\ 
+        UFMG \cite{ufmg}         & 540               & 2145             & 25.17\%                          \\ 
+        UFPE \cite{ufpe}         & 285               & 2355             & 12.10\%                          \\ 
+        UFRGS \cite{ufrgs}       & 360               & 2580             & 13.95\%                          \\ 
+        UFRJ \cite{ufrj}         & 480               & 2250             & 21.33\%                          \\ 
+        UFSC \cite{ufsc}         & 486               & 3114             & 15.61\%                          \\ 
+        UNICAMP \cite{unicamp}   & 510               & 2160             & 23.61\%                          \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}
+	\centering
+	\caption{Math Coverage in Brazilian CS Curricula}
+    \begin{tabular}{|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|}
+        \hline
+        University               & Total core hours & Total math hours & Percentage of math in curriculum          \\ \hline
 		\rowcolor[gray]{.9}
-        SBC (4 years) \cite{sbc} & 450            & 18.75\%                                   \\ 
-        ICMC/USP \cite{icmc}     & 540            & 12.29\%                                   \\ 
-        IME/USP \cite{ime}       & 750            & 25.13\%                                   \\ 
-        PUC-RS \cite{pucrs}      & 240            & 7.88\%                                    \\ 
-        UFC \cite{ufc}           & 336            & 10.24\%                                   \\ 
-        UFCG \cite{ufcg}         & 420            & 13.46\%                                   \\ 
-        UFMG \cite{ufmg}         & 285            & 10.86\%                                   \\ 
-        UFPE \cite{ufpe}         & 375            & 10.73\%                                   \\ 
-        UFRGS \cite{ufrgs}       & 397            & 12.24\%                                   \\ 
-        UFRJ \cite{ufrj}         & 489            & 15.90\%                                   \\ 
-        UFSC \cite{ufsc}         & 378            & 10.71\%                                   \\ 
-        UNICAMP \cite{unicamp}   & 525            & 17.50\%                                   \\ 
+        ACM \cite{cs2008}        & 280              & 39             & 13.93\%                                   \\
+		\rowcolor[gray]{.9}
+        SBC (4 years) \cite{sbc} & 2400             & 450            & 18.75\%                                   \\ 
+        ICMC/USP \cite{icmc}     & 3945             & 540            & 13.69\%                                   \\ 
+        IME/USP \cite{ime}       & 2775             & 750            & 27.03\%                                   \\ 
+        PUC-RS \cite{pucrs}      & 2760             & 300            & 10.87\%                                   \\ 
+        UFC \cite{ufc}           & 2448             & 400            & 16.34\%                                   \\ 
+        UFCG \cite{ufcg}         & 2490             & 420            & 16.87\%                                   \\ 
+        UFMG \cite{ufmg}         & 2145             & 540            & 25.17\%                                   \\ 
+        UFPE \cite{ufpe}         & 2355             & 285            & 12.10\%                                   \\ 
+        UFRGS \cite{ufrgs}       & 2580             & 360            & 13.95\%                                   \\ 
+        UFRJ \cite{ufrj}         & 2250             & 480            & 21.33\%                                   \\ 
+        UFSC \cite{ufsc}         & 3114             & 486            & 15.61\%                                   \\ 
+        UNICAMP \cite{unicamp}   & 2160             & 510            & 23.61\%                                   \\ 
         \hline
     \end{tabular}
 \end{table}

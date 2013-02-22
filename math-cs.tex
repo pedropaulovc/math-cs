@@ -50,7 +50,7 @@ Email: giuliano.olguin@gmail.com}}
 
     Since 1960, the importance of mathematics in Computer Science (CS) undergraduate curricula has been decreasing, particularly, because new fields in CS have risen and they were assimilated in the curricula. Despite of reduction, mathematics still have its role in CS's curricula.
 
-    The goal of this paper is to analyze the amount of the courses related to mathematics in different CS undergraduate curricula. In this work are analyzed the lecture hour load dedicated to mathematics courses on ten Brazilian CS undergraduate programs: The Federal Universities of Ceará, Minas Gerais, Campina Grande, Pernambuco, Rio de Janeiro, Rio Grande do Sul and Santa Catarina, State Universities of São Paulo and Campinas and the Pontifical Catholic University of Rio Grande do Sul. These programs were selected among others due their 5-stars rating in the Guia do Estudante 2012 Ranking, published by Editora Abril.
+    The goal of this paper is to analyze the amount of the courses related to mathematics in different CS undergraduate curricula. In this work are analyzed the lecture hour load dedicated to mathematics courses on eleven Brazilian CS undergraduate programs: The Federal Universities of Ceará, Minas Gerais, Campina Grande, Pernambuco, Rio de Janeiro, Rio Grande do Sul and Santa Catarina, State Universities of São Paulo (two programs) and Campinas and the Pontifical Catholic University of Rio Grande do Sul. These programs were selected among others due their 5-stars rating in the Guia do Estudante 2012 Ranking, published by Editora Abril.
 
     To allow this comparison, it was established a definition of what was considered a lecture hour of mathematics. For a reference point, such programs were compared with two reference curricula in the area: The Brazilian Computer Society (SBC) and the Computer Science Curriculum 2008 made by the IEEE Computer Society and Association for Computing Machinery (ACM) joint task force.
 
@@ -83,6 +83,8 @@ influences practice.''
 
 	According to \cite{kelemen:has_become_math_phobic}, ``Computer Science students should be able to model `real world' problems precisely using mathematics and using structures like arrays, linked lists, trees, finite graphs and matrices. They should be able to design and analyze algorithms that transform such structures [\ldots], understand the nature of a mathematical model and relate mathematical models to areas of real problems [\ldots]. Strategies for solving problems such as divide-and-conquer and backtracking are also essential.''
 
+	This paper aims to fill the need from university faculty who want, for example, reform their curriculum. By presenting an updated overview of the approach used in various well ranked national curricula for the math subject it is possible to make better decisions. The consolidated information is then compared with standards in the academia, allowing a broad and weighted view of the current math education reality in Brazilian CS undergraduate programs.
+	
 \section{Methodology}
 	This paper makes a comparative study of different Brazilian Computer Science programs through a quantitative comparison of the number of lecture hours in the area of mathematics both in absolute and in relative values to the total hours required for graduation. The main goal is to identify whether the selected courses have more or less emphasis on mathematics compared with two reference curricula in the area, the Brazilian Computer Society (SBC) \cite{sbc} and the Computer Science Curriculum 2008 (CS2008) made by the IEEE Computer Society and the Association for Computing Machinery (ACM) joint task force \cite{cs2008}.
 
@@ -99,7 +101,7 @@ influences practice.''
 	enlargelimits=0.15,
 	legend style={at={(0.5,-0.15)},
 	anchor=north,legend columns=-1},
-	ylabel={\% Percentage of math in curriculum},
+	ylabel={\% of math in curriculum},
 	symbolic x coords={pre,ICMC/USP,IME/USP,PUC-RS,UFC,UFCG,UFMG,UFPE,UFRGS,UFRJ,UFSC,UNICAMP,pos},
 	xtick=data,
 %	nodes near coords,
@@ -108,10 +110,10 @@ influences practice.''
 	]
 	
 	\addplot 
-		coordinates {(ICMC/USP,12.29) (IME/USP,25.13) (PUC-RS,7.88) (UFC,10.24) (UFCG,13.46) (UFMG,10.86) (UFPE,10.73) (UFRGS,12.24) (UFRJ,15.90) (UFSC,10.71) (UNICAMP,17.50)};
+		coordinates {(ICMC/USP,12.29) (IME/USP,25.13) (PUC-RS,9.85) (UFC,12.20) (UFCG,13.46) (UFMG,20.57) (UFPE,8.15) (UFRGS,11.11) (UFRJ,15.61) (UFSC,13.78) (UNICAMP,17.00)};
 	\addplot[red,sharp plot]
-		coordinates {(pre,15.36) (pos,15.36)}
-		node[above] at (axis cs:UFMG,15.36) {ACM};
+		coordinates {(pre,13.93) (pos,13.93)}
+		node[above] at (axis cs:UFMG,13.93) {ACM/IEEE};
 	\addplot[red,sharp plot]
 		coordinates {(pre,18.75) (pos,18.75)}
 		node[above] at (axis cs:UFMG,18.75) {SBC};
@@ -126,72 +128,91 @@ influences practice.''
 	
 	A side effect of this choice is that most of the programs studied are held by public universities, which must be taken into account in the data analysis since they may have different emphases in the quantity and approach in fundamentals disciplines (especially mathematics) in comparison to private universities.
 	
-\section{Data}
-Table 1 presents the general panorama of the 10 universities indicating their size and course characteristics.
+	In 2011 the Brazilian Ministry of Education applied the latest National Test of Student Performance (ENADE) on CS programs. While some universities, like USP, chose to not participate, it presents a fairly accurate estimate on how many CS programs are in Brazil. According to it, there are at least 354 programs, 258 private and 96 public. \cite{enade} 
 
-\begin{table}
-	\centering
-	\caption{Studied CS programs panorama}
-    \begin{tabular}{|c|c|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|}
-        \hline
-        University             & Total hours & Period     & Graduation (years) & Students per year \\ \hline
-        \rowcolor[gray]{.9}
-        ACM \cite{cs2008}      & 280         & N/A        & 4               & N/A                  \\
-        \rowcolor[gray]{.9}
-        SBC \cite{sbc}         & 2400        & N/A        & 4               & N/A                  \\ 
-        \rowcolor[gray]{.9}
-        SBC \cite{sbc}         & 3000        & N/A        & 5               & N/A                  \\ 
-        ICMC/USP \cite{icmc}   & 4395        & Diurnal    & 5               & 100                  \\ 
-        IME/USP \cite{ime}     & 2985        & Diurnal    & 4               & 50                   \\ 
-        PUC-RS \cite{pucrs}    & 3045        & Nocturnal  & 4               & 60                   \\ 
-        UFC \cite{ufc}         & 3280        & Diurnal    & 4               & 60                   \\ 
-        UFCG \cite{ufcg}       & 3120        & Diurnal    & 4               & 90                   \\ 
-        UFMG \cite{ufmg}       & 2625        & Diurnal    & 4               & 80                   \\ 
-        UFPE \cite{ufpe}       & 3495        & Diurnal    & 4.5             & 100                  \\ 
-        UFRGS \cite{ufrgs}     & 3240        & Diurnal    & 4.5             & 100                  \\ 
-        UFRJ \cite{ufrj}       & 3075        & Diurnal    & 4.5             & 50                   \\ 
-        UFSC \cite{ufsc}       & 3528        & Diurnal    & 4               & 100                  \\ 
-        UNICAMP \cite{unicamp} & 3000        & Nocturnal  & 5               & 50                   \\ 
-        \hline
-    \end{tabular}
-\end{table}
+\section{Reference Curricula}
+	As pointed out previously, Brazilian CS programs have their curricular contents mainly guided by two reference curricula. In an international level by the ACM/IEEE Computer Science Curriculum which current revision is from 2008 (CS2008) \cite{cs2008} and in a country level by the Brazilian Computer Society Curricular Reference from 2005 (CR2005) \cite{sbc}.
+
+	CS2008 is internally subdivided in three granularities, from the bigger to the smaller: knowledge areas, knowledge units and learning objectives. The Discrete Structures (DS) knowledge area is the only one that fits (partially) in the definition of mathematics used in this paer. More specifically, DS has the following knowledge units: Functions Relations and Sets, Basic Logic, Proof Techniques, Basics of Counting, Discrete Probability, Graphs and Trees. From these, all but Graphs and Trees were accounted.
+
+	In accordance with CS2008, 280 lecture hours are necessary to comprise the whole obligatory curriculum, with the math area representing 39 lecture hours. Note that CS2008 only addresses contents closely linked to Computer Science. There are no mentions on the requirements for Calculus, Linear Algebra or Differential Equations, necessary for advanced disciplines.
+
+	On the other side, CR2005 has a more broad definition of mathematics than the used in this paper. It states that the following topics fall in the area: Linear Algebra, Combinatorial Analysis, Differential and Integral Calculus, Differential Equations, Analytical Geometry, Mathematical Logic, Discrete Mathematics, Probability and Statistics and Complex Variables. CR2005 doesn't detail how much time each of these topics should receive, it only affirms that it's necessary 30 ``credits'', didatic activiy units, for the whole mathematics area. The full CR2005 curriculum requires at least 160 ``credits'' for 4-year programs or 200 ``credits'' for 5-year programs.
+
+\section{Data}
+	Table I presents the general panorama of the eleven chosen CS programs indicating their size and course characteristics.
 
 	It can be seen that most programs are diurnals (Full-time), lasting between 4 and 4.5 years. It is important to notice that the relationship between a credit and its lecture hours varies between universities. There are programs like USP and the ACM/IEEE reference curriculum that consider a credit is equal to 15 hours, on the other side, UFSC, for example, adopts the ratio 1 credit = 18 hours. The SBC curriculum does not indicate what is relation is adopted and so the authors chose to consider the value of 15 hours for comparison purposes.
 
-	In Table I, the totals shown correspond to the minimum lecture hours necessary to acheive graduation, including elective disciplines or mandatory internships when they exist.
+\begin{table}
+	\centering
+	\caption{Studied CS Programs Panorama}
+    \begin{tabular}{|c|c|c|>{\centering\arraybackslash}m{1cm}|}
+        \hline
+        University             & Period     & Graduation (years) & Students per year \\ \hline
+        \rowcolor[gray]{.9}
+        ACM/IEEE \cite{cs2008}      & N/A        & 4               & N/A                  \\
+        \rowcolor[gray]{.9}
+        SBC \cite{sbc}         & N/A        & 4               & N/A                  \\ 
+        \rowcolor[gray]{.9}
+        SBC \cite{sbc}         & N/A        & 5               & N/A                  \\ 
+        ICMC/USP \cite{icmc}   & Diurnal    & 5               & 100                  \\ 
+        IME/USP \cite{ime}     & Diurnal    & 4               & 50                   \\ 
+        PUC-RS \cite{pucrs}    & Nocturnal  & 4               & 60                   \\ 
+        UFC \cite{ufc}         & Diurnal    & 4               & 60                   \\ 
+        UFCG \cite{ufcg}       & Diurnal    & 4               & 90                   \\ 
+        UFMG \cite{ufmg}       & Diurnal    & 4               & 80                   \\ 
+        UFPE \cite{ufpe}       & Diurnal    & 4.5             & 100                  \\ 
+        UFRGS \cite{ufrgs}     & Diurnal    & 4.5             & 100                  \\ 
+        UFRJ \cite{ufrj}       & Diurnal    & 4.5             & 50                   \\ 
+        UFSC \cite{ufsc}       & Diurnal    & 4               & 100                  \\ 
+        UNICAMP \cite{unicamp} & Nocturnal  & 5               & 50                   \\ 
+        \hline
+    \end{tabular}
+\end{table}
 
 %FIXME: Remove 1st person	
 	Analyzing the amount of hours column we can see that there is a great variability in the amount required by the curricula of different universities. On average 3177h are required ($ \sigma = 554h $) for 4 years programs, 3270 hours ($ \sigma = 211h $) for 4.5 years programs and 3465 h ($ \sigma = ***h $) for 5 years programs.
 
-	Table 2 deals with the mathematics disciplines. Here we can see a great diversity in the workload allocation to the subject in Brazilian CS curricula. Here, universities have an average of 15.6\% ($ \sigma = 4.77\% $) of disciplines exclusively in this area.
-
-	Still, we note that when comparing each university curriculum with IEEE/ACM reference (which claims to be the minimum necessary to cover the topic) we can see that load of 5 courses have mathematics greater or equal than the recommended and 6 programs have less. This corroborates the authors' point of view cited above who claim that mathematics is a discipline in decline in CS programs.
-
 \begin{table}
 	\centering
 	\caption{math coverage in Brazilian CS curricula}
-    \begin{tabular}{|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|}
+    \begin{tabular}{|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|}
         \hline
-        University               & Total math hours & Percentage of math in curriculum          \\ \hline
+        University               & Total math hours & Total curricular hours & Percentage of math in curriculum \\ \hline
 		\rowcolor[gray]{.9}
-        ACM \cite{cs2008}        & 43             & 15.36\%                                   \\
+        ACM/IEEE \cite{cs2008}        & 39               & 280                    & 13.93\%                          \\ 
 		\rowcolor[gray]{.9}
-        SBC (4 years) \cite{sbc} & 450            & 18.75\%                                   \\ 
-        ICMC/USP \cite{icmc}     & 540            & 12.29\%                                   \\ 
-        IME/USP \cite{ime}       & 750            & 25.13\%                                   \\ 
-        PUC-RS \cite{pucrs}      & 240            & 7.88\%                                    \\ 
-        UFC \cite{ufc}           & 336            & 10.24\%                                   \\ 
-        UFCG \cite{ufcg}         & 420            & 13.46\%                                   \\ 
-        UFMG \cite{ufmg}         & 285            & 10.86\%                                   \\ 
-        UFPE \cite{ufpe}         & 375            & 10.73\%                                   \\ 
-        UFRGS \cite{ufrgs}       & 397            & 12.24\%                                   \\ 
-        UFRJ \cite{ufrj}         & 489            & 15.90\%                                   \\ 
-        UFSC \cite{ufsc}         & 378            & 10.71\%                                   \\ 
-        UNICAMP \cite{unicamp}   & 525            & 17.50\%                                   \\ 
+        SBC (4 years) \cite{sbc} & 30               & 160                    & 18.75\%                          \\ 
+        ICMC/USP \cite{icmc}     & 540              & 4395                   & 12.29\%                          \\ 
+        IME/USP \cite{ime}       & 750              & 2985                   & 25.13\%                          \\ 
+        PUC-RS \cite{pucrs}      & 300              & 3045                   & 9.85\%                           \\ 
+        UFC \cite{ufc}           & 400              & 3280                   & 12.20\%                          \\ 
+        UFCG \cite{ufcg}         & 420              & 3120                   & 13.46\%                          \\ 
+        UFMG \cite{ufmg}         & 540              & 2625                   & 20.57\%                          \\ 
+        UFPE \cite{ufpe}         & 285              & 3495                   & 8.15\%                           \\ 
+        UFRGS \cite{ufrgs}       & 360              & 3240                   & 11.11\%                          \\ 
+        UFRJ \cite{ufrj}         & 480              & 3075                   & 15.61\%                          \\ 
+        UFSC \cite{ufsc}         & 486              & 3528                   & 13.78\%                          \\ 
+        UNICAMP \cite{unicamp}   & 510              & 3000                   & 17.00\%                          \\
         \hline
     \end{tabular}
 \end{table}
 
+	Table 2 deals with the mathematics disciplines. Here we can see a great diversity in the workload allocation to the subject in Brazilian CS curricula. Here, universities have an average of 15.6\% ($ \sigma = 4.77\% $) of disciplines exclusively in this area.
+
+	In Table I, the totals shown correspond to the minimum lecture hours necessary to acheive graduation, including elective disciplines or mandatory internships when they exist.
+
+	Still, we note that when comparing each university curriculum with IEEE/ACM reference (which claims to be the minimum necessary to cover the topic) we can see that load of 5 courses have mathematics greater or equal than the recommended and 6 programs have less. This corroborates the authors' point of view cited above who claim that mathematics is a discipline in decline in CS programs.
+
+\section{Future works}
+	In Brazil there are many undergraduate rankings available. Beyond Guia do Estudante, the ENADE ranking, for example, could be used to analyze a different set of universities. Just like Guia do Estudante, ENADE analyzes the infrastructure of the university and the level of graduation of professors but also applies a test on a subset of the freshmen and senior students in order to evaluate the knowledge acquired in the graduation years. \cite{enade_info} Using the Preliminary Concept of Course (CPC) available at \cite{enade} the 10 best ranked universities are: Federal Universities of Rio Grande do Sul (UFRGS), Goiás (UFG), Campina Grande (UFCG), the city of Rio de Janeiro (Fluminense - UFF), Minas Gerais (UFMG), Pelotas (UFPel), Viçosa (UFV) and the Pampa (UNIPAMPA) and the particular Universities of the West of São Paulo (UNOESTE) and of the North (UNINORTE). 
+	
+	With both comparisons another possibility is to analyze if there is a positive correlation between a highly ranked program in rankings and the amount of mathematics studied during undergraduation. If so, further investigation may be necessary in order to find if there is a relation of cause and effect between the math study and the quality of a undergraduate program.
+	
+	Finally, different studies are possible to measure the actual utility of a more theoretical topic in the professional life of a graduate. One possibility is to apply questionnaires to former students with the goal of identifying strengths and weaknesses of a curriculum.
+	
+	
 \section{Conclusions}
 	In this paper it was possible to see how mathematics disciplines are of great importance for a future graduate in Computer Science. It was presented that such subject is a base which needs to be robust to the development of more advanced topics which are based on it. Besides, many educators in the area of Computing with articles published in international events share that view.
 

@@ -129,17 +129,17 @@ Email: giuliano.olguin@gmail.com}}
     \begin{tabular}{|c|c|>{\centering\arraybackslash}m{0.9cm}|>{\centering\arraybackslash}m{0.8cm}|>{\centering\arraybackslash}m{2.1cm}|}
         \hline
         University             & Period     & Years to graduate & Students per year & Where is located \\ \hline
-        ICMC/USP \cite{icmc}   & Diurnal    & 5               & 100               & Institute of Mathematical Sciences and CS \\ 
-        IME/USP \cite{ime}     & Diurnal    & 4               & 50                & Institute of Mathematics and Statistics   \\ 
-        PUC-RS \cite{pucrs}    & Nocturnal  & 4               & 60                & Faculty of Informatics   \\ 
-        UFC \cite{ufc}         & Diurnal    & 4               & 60                & Center of Sciences   \\ 
-        UFCG \cite{ufcg}       & Diurnal    & 4               & 90                & Center of Eletrical Engineering and Informatics   \\ 
-        UFMG \cite{ufmg}       & Diurnal    & 4               & 80                & Institute of Exact Sciences   \\ 
-        UFPE \cite{ufpe}       & Diurnal    & 4.5             & 100               & Center of Informatics   \\ 
-        UFRGS \cite{ufrgs}     & Diurnal    & 4.5             & 100               & Institute of Informatics   \\ 
-        UFRJ \cite{ufrj}       & Diurnal    & 4.5             & 50                & Institute of Mathematics   \\ 
-        UFSC \cite{ufsc}       & Diurnal    & 4               & 100               & Institute of Informatics and Statistics   \\ 
-        UNICAMP \cite{unicamp} & Nocturnal  & 5               & 50                & Institute of Computing   \\ 
+        ICMC/USP \cite{fuvest} & Diurnal    & 5               & 100               & Institute of Mathematical Sciences and CS \\ 
+        IME/USP \cite{fuvest}  & Diurnal    & 4               & 50                & Institute of Mathematics and Statistics   \\ 
+        PUC-RS\cite{vest_pucrs}& Nocturnal  & 4               & 60                & Faculty of Informatics   \\ 
+        UFC \cite{vest_ufc}    & Diurnal    & 4               & 60                & Center of Sciences   \\ 
+        UFCG \cite{vest_ufcg}  & Diurnal    & 4               & 90                & Center of Eletrical Engineering and Informatics   \\ 
+        UFMG \cite{vest_ufmg}  & Diurnal    & 4               & 80                & Institute of Exact Sciences   \\ 
+        UFPE \cite{vest_ufpe}  & Diurnal    & 4.5             & 100               & Center of Informatics   \\ 
+        UFRGS \cite{vest_ufrgs}& Diurnal    & 4.5             & 100               & Institute of Informatics   \\ 
+        UFRJ \cite{vest_ufrj}  & Diurnal    & 4.5             & 50                & Institute of Mathematics   \\ 
+        UFSC \cite{vest_ufsc}  & Diurnal    & 4               & 100               & Institute of Informatics and Statistics   \\ 
+        UNICAMP\cite{vest_ucp} & Nocturnal  & 5               & 50                & Institute of Computing   \\ 
         \hline
     \end{tabular}
 \end{table}
@@ -161,9 +161,7 @@ Email: giuliano.olguin@gmail.com}}
 	On the other side, CR2005 has a more broad definition of mathematics than the used in this paper. It states that the following topics fall in the area: Linear Algebra, Combinatorial Analysis, Differential and Integral Calculus, Differential Equations, Analytical Geometry, Mathematical Logic, Discrete Mathematics, Probability and Statistics and Complex Variables. CR2005 doesn't detail how much time each of these topics should receive, it only affirms that it's necessary 30 ``credits'', didatic activiy units, for the whole mathematics area. The full CR2005 curriculum requires at least 160 ``credits'' for 4-year programs or 200 ``credits'' for 5-year programs.
 
 \section{Data}
-	Table I presents the general panorama of the eleven chosen CS programs indicating their size and course characteristics. It can be seen that most programs are diurnals (Full-time), with more than half of them lasting four years. 
-
-	Analyzing the amount of hours column we can see that there is a great variability in the amount required by the curricula of different universities. On average 3177h are required ($ \sigma = 554h $) for 4 years programs, 3270 hours ($ \sigma = 211h $) for 4.5 years programs and 3465 h ($ \sigma = ***h $) for 5 years programs.
+	Table I presents the general panorama of the eleven chosen CS programs indicating their size, location inside the university and course characteristics. While most most programs are diurnals (Full-time), with more than half of them lasting four years, it's possible to perceive two different sources of influence on the undergraduate program based on the location of the department responsible for it: In one side there are the ones that are closer to the mathematics departments in the university, IME/USP, ICMC/USP and UFRJ and the more technological ones, closer to engineering departments.
 
 \begin{table}
 	\centering
@@ -172,7 +170,7 @@ Email: giuliano.olguin@gmail.com}}
         \hline
         University               & Total math hours & Total curricular hours & Percentage of math in curriculum \\ \hline
 		\rowcolor[gray]{.9}
-        ACM/IEEE \cite{cs2008}        & 39               & 280                    & 13.93\%                          \\ 
+        ACM/IEEE \cite{cs2008}   & 39               & 280                    & 13.93\%                          \\ 
 		\rowcolor[gray]{.9}
         SBC (4 years) \cite{sbc} & 30               & 160                    & 18.75\%                          \\ 
         ICMC/USP \cite{icmc}     & 540              & 4395                   & 12.29\%                          \\ 
@@ -190,11 +188,12 @@ Email: giuliano.olguin@gmail.com}}
     \end{tabular}
 \end{table}
 
-	Table 2 deals with the mathematics disciplines. Here we can see a great diversity in the workload allocation to the subject in Brazilian CS curricula. Here, universities have an average of 15.6\% ($ \sigma = 4.77\% $) of disciplines exclusively in this area.
+	Table II deals with the total time necessary to achieve graduation and the portion of this time that is dedicated to mathematics as defined previously. It is important to notice that the totals shown include elective disciplines or mandatory internships when they exist.
 
-	In Table I, the totals shown correspond to the minimum lecture hours necessary to acheive graduation, including elective disciplines or mandatory internships when they exist.
+	Analyzing the amount of hours column we can see that there is a great variability in the hour load required by the curricula of different universities and the reserved portion to math. On average 3097$h$ are required ($ \sigma = 302h $) for 4 years programs, 3270$h$ ($ \sigma = 212h $) for 4.5 years programs and 3698$h$ ($ \sigma = 986h $) for 5 years programs. Studied universities have an average of 14.47\% ($ \sigma = 4.92\% $) of disciplines exclusively in this area.
 
-	Still, we note that when comparing each university curriculum with IEEE/ACM reference (which claims to be the minimum necessary to cover the topic) we can see that load of 5 courses have mathematics greater or equal than the recommended and 6 programs have less. This corroborates the authors' point of view cited above who claim that mathematics is a discipline in decline in CS programs.
+	The most important fact derived from data is the fact that few CS programs achieve the minimum hour load for math according to CS2008 or CR2005. This can be better visualized in Figure 1. Only IME/USP and UFMG fully meet the standards presented, while UFRJ and UNICAMP meet only CS2008. This implies that there is no evident correlation between the location of a CS program and its mathematical bias. Despite the fact that the ICMC/USP program is located near the math and statistics departments, it didn't acheive the minimum in both standards.
+	
 
 \section{Future works}
 	In Brazil there are many undergraduate rankings available. Beyond Guia do Estudante, the ENADE ranking, for example, could be used to analyze a different set of universities. Just like Guia do Estudante, ENADE analyzes the infrastructure of the university and the level of graduation of professors but also applies a test on a subset of the freshmen and senior students in order to evaluate the knowledge acquired in the graduation years. \cite{enade_info} Using the Preliminary Concept of Course (CPC) available at \cite{enade} the 10 best ranked universities are: Federal Universities of Rio Grande do Sul (UFRGS), Goiás (UFG), Campina Grande (UFCG), the city of Rio de Janeiro (Fluminense - UFF), Minas Gerais (UFMG), Pelotas (UFPel), Viçosa (UFV) and the Pampa (UNIPAMPA) and the particular Universities of the West of São Paulo (UNOESTE) and of the North (UNINORTE). 
@@ -209,7 +208,7 @@ Email: giuliano.olguin@gmail.com}}
 
 	Moreover, it was noted that this area is experiencing a decline in its relevance, in part by the emergence of several new trends in the market that are absorbed in undergraduate curricula.
 	
-	Finally, an analysis of the current emphasis on mathematics in 11 Brazilian CS curricula from 10 different universities was conducted through the study of absolute and relative workload in the area. It was found that more than 50 \% of the programs surveyed have a lower load than recommended by ACM reference curriculum.
+	Finally, an analysis of the current emphasis on mathematics in eleven Brazilian CS curricula from ten different universities was conducted through the study of absolute and relative workload in the area. It was found that only two programs fully and two other partially meet the minimum hour load for mathematics in an undergraduate CS curriculum according to two different academic standards, one national and the other international.
 	
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.

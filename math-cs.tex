@@ -1,4 +1,3 @@
-
 \documentclass[conference]{IEEEtran}
 
 \ifCLASSINFOpdf
@@ -24,53 +23,44 @@
 
 \title{A Survey on the Mathematical Emphasis in Brazilian Computer Science Curricula}
 
-\author{\IEEEauthorblockN{Pedro Paulo Vezzá Campos }
-\IEEEauthorblockA{Institute of Mathematics and Statistics\\
-University of São Paulo\\
-São Paulo, Brazil\\
-Email: pedrovc@ime.usp.br}
-\and
-\IEEEauthorblockN{Jackson José Souza}
-\IEEEauthorblockA{Institute of Mathematics and Statistics\\
-University of São Paulo\\
-São Paulo, Brazil\\
-Email: jackson@ime.usp.br}
-\and
-\IEEEauthorblockN{Giuliano Salcas Olguin}
-\IEEEauthorblockA{Faculty of Education\\
-University of Campinas\\
-Campinas, Brazil\\
-Email: giuliano.olguin@gmail.com}}
+\author{
+    \IEEEauthorblockN{Pedro Paulo Vezzá Campos\IEEEauthorrefmark{1}, Jackson José Souza\IEEEauthorrefmark{1}, Giuliano Salcas Olguin\IEEEauthorrefmark{2}\IEEEauthorrefmark{3}}
+    \IEEEauthorblockA{\IEEEauthorrefmark{1}Institute of Mathematics and Statistics -- University of São Paulo, São Paulo, Brazil\\
+	\{pedrovc, jackson\}@ime.usp.br}
+    \IEEEauthorblockA{\IEEEauthorrefmark{2}Faculty of Education -- University of Campinas, Campinas, Brazil}
+    \IEEEauthorblockA{\IEEEauthorrefmark{3}Polytechnic School -- University of São Paulo, São Paulo, Brazil\\
+   	giuliano.olguin@gmail.com}
+}
 
 \maketitle
 
 
 \begin{abstract}
-    A recurring question raised by professors and undergraduate students involves the distribution of basic and pratical - or professional - courses. Some authors defend a curriculum with more basic courses, such as mathematics, Physics and Chemistry, in order to create a solid background. Moreover, there is a growth of academic exchange programs all around the world, which requires a common learning base.
+    A recurring question raised by professors and undergraduate students involves the distribution of basic and practical — or professional — courses. Some authors defend a curriculum with more basic courses, such as Mathematics, Physics and Chemistry, in order to create a solid background. Moreover, there is a growth of academic exchange programs all around the world, which require a common learning base.
 
-    Since 1960, the importance of mathematics in Computer Science (CS) undergraduate curricula has been decreasing, particularly, because new fields in CS have risen and they were assimilated in the curricula. Despite of reduction, mathematics still have its role in CS's curricula.
+    Since 1960, the importance of mathematics in Computer Science (CS) undergraduate curricula has been decreasing, particularly, because new fields in CS have risen and they were assimilated in the curricula. Despite of reduction, mathematics still has its role in CS's curricula.
 
-    The goal of this paper is to analyze the amount of the courses related to mathematics in different CS undergraduate curricula. In this work are analyzed the lecture hour load dedicated to mathematics courses on eleven Brazilian CS undergraduate programs: The Federal Universities of Ceará, Minas Gerais, Campina Grande, Pernambuco, Rio de Janeiro, Rio Grande do Sul and Santa Catarina, State Universities of São Paulo (two programs) and Campinas and the Pontifical Catholic University of Rio Grande do Sul. These programs were selected among others due their 5-stars rating in the Guia do Estudante 2012 Ranking, published by Editora Abril.
+    The goal of this paper is to analyze the amount of the courses related to mathematics in different CS undergraduate curricula. In this work is analyzed the lecture hour load dedicated to mathematics courses on eleven Brazilian CS undergraduate programs: The Federal Universities of Ceará, Minas Gerais, Campina Grande, Pernambuco, Rio de Janeiro, Rio Grande do Sul and Santa Catarina, State Universities of São Paulo (two programs) and Campinas and the Pontifical Catholic University of Rio Grande do Sul. These programs were selected among others due their 5-stars rating in the Guia do Estudante 2012 Ranking, published by Editora Abril.
 
     To allow this comparison, it was established a definition of what was considered a lecture hour of mathematics. For a reference point, such programs were compared with two reference curricula in the area: The Brazilian Computer Society (SBC) and the Computer Science Curriculum 2008 made by the IEEE Computer Society and Association for Computing Machinery (ACM) joint task force.
 
-    The curricula presented in the official sites of the selected universities in 2012 were analyzed and it was possible to conclude that more than half of the programs don't achieve the minimum amount of mathematics study hours necessary during undergraduate studies according to IEEE/ACM's reference curriculum.
+    The curricula presented in the official websites of the selected universities in 2012 were analyzed and it was possible to conclude that more than half of the programs don't achieve the minimum amount of mathematics study hours necessary during undergraduate studies according to IEEE/ACM's reference curriculum.
 \end{abstract}
 
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
-	The recent growth of different higher education courses have resulted in a worsening of the identity crisis inside the university. Since its creation in the late thirteenth century \cite{oliveira:origem_universidades}, its function varied with the political context of local society, basically presenting values related to national issues. Still, persisted the existence of two orthogonal trends, the one which states that the university mission should be to fix the current problems of society, and the one which states that its main task is to be a beacon, glimpsing the future. The present difficulty is that there are some undergraduate programs that follow the first trend and consequently aim immediate employability by focusing on technical knowledge and others that follow the second trend, valuing the academic knowledge and being more interested in graduating professionals able to deal with problems that still doesn't exist. Merging these two powers seems to be an impossible task.
+	The recent growth of different higher education courses have resulted in a worsening of the identity crisis inside the university. Since its creation in the late thirteenth century \cite{oliveira:origem_universidades}, its function varied with the political context of local society, basically presenting values related to national issues. Still, persisted the existence of two orthogonal trends, the one which states that the university mission should be to fix the current problems of society, and the one which states that its main task is to be a beacon, glimpsing the future. The present difficulty is that there are some undergraduate programs that follow the first trend and consequently aim immediate employability by focusing on technical knowledge and others that follow the second trend, valuing the academic knowledge and being more interested in graduating professionals able to deal with problems that still don't exist. Merging these two powers seems to be an impossible task.
 	
-	According to Renato Janine, Brazilian philosopher, there are certain knowledges which are volatile, usually the technical ones, which should be taught by companies. Furthermore, it's better that in their formation years, the young deal with what's perennial, by giving him a solid foundation, than with details in constant change \cite{ribeiro:universidade_vida_atual}.
+	According to Renato Janine, Brazilian philosopher, there are certain knowledges which are volatile, usually the technical ones, which should be taught by companies. Furthermore, it's better that, in their formation years, the young deal with what's perennial, by giving them a solid foundation, than with details in constant change \cite{ribeiro:universidade_vida_atual}.
 
 	The university should give the necessary foundations so that after graduated the person may be able to adapt to different standards used by companies in the practice of the profession whose qualification was obtained at the university. Therefore, the university should not bother to teach different types of procedures established in the labor market or teach techniques to deal only with some particular problems of the profession. In face of a rapidly changing world, where new challenges appear in an ever increasing rate, it should rather prepare students to deal with any problem or types of procedures at any time, whether present or future.
 
-	After all, the procedures may vary not only across companies but also change over time. Thus, the trained professional would not be prepared for the future and could only adapt to companies who could handle some certain problems and only dominate some specific techniques. One can easily notice this fact through the rapid evolution of software, which require a constant learning of their manipulation, generating in some cases a disposal of knowledge previously seen.
+	After all, the procedures may vary not only across companies, but also change over time. Thus, the trained professional would not be prepared for the future and could only adapt to companies that could handle some certain problems and only dominate some specific techniques. One can easily notice this fact through the rapid evolution of software, which require a constant learning of their manipulation, generating in some cases a disposal of knowledge previously seen.
 
 	Therefore, it is evident that the theory and fundamentals are essential for this type of formation and can not be \emph{replaced} by just technical or practical knowledge. After all, foundations give the ability to take a given problem and use one approach or reasoning to solve it. This issue has greater impact on technology-intensive undergraduate programs, such as engineering, these still being governed by entities that control the exercise of the profession.
 
-	On the other side, practice has also an important role in the learning process. It allows students apply concepts in real problems and by this deduce conclusions which strengthen and sediments their knowledge of the area. This is particularly true for areas like Computer Science, which need to balance theory derived from algorithms and graph theory with programming, for example. As \cite{cs2008} states, one desirable characteristic of graduates is the appreciation of the interplay between theory and practice. ``A fundamental aspect of computer science is the balance between theory and practice and the essential link between them. Graduates of a computer science program must understand not only the theoretical underpinnings of the discipline but also how that theory influences practice.''
+	On the other side, practice has also an important role in the learning process. It allows students to apply concepts in real problems and by this deduce conclusions which strengthen and sediments their knowledge of the area. This is particularly true for areas like Computer Science, which need to balance theory derived from algorithms and graph theory with programming, for example. As \cite{cs2008} states, one desirable characteristic of graduates is the appreciation of the interplay between theory and practice. ``A fundamental aspect of computer science is the balance between theory and practice and the essential link between them. Graduates of a computer science program must understand not only the theoretical underpinnings of the discipline but also how that theory influences practice.''
 
 	One of the common points, located in virtually every course curriculum that deal with technology are the contents of mathematics. Those, which in most cases have only a basic level of depth, precisely fit the definition that Renato Janine presented for tasks to be developed within the university. According to Anthony Ralston, mathematics develops the mind and ``improves students' learning skills.'' \cite{ralston:do_need_mathematics}
 
@@ -82,14 +72,14 @@ Email: giuliano.olguin@gmail.com}}
 
 	According to \cite{kelemen:has_become_math_phobic}, ``Computer Science students should be able to model `real world' problems precisely using mathematics and using structures like arrays, linked lists, trees, finite graphs and matrices. They should be able to design and analyze algorithms that transform such structures [\ldots], understand the nature of a mathematical model and relate mathematical models to areas of real problems [\ldots]. Strategies for solving problems such as divide-and-conquer and backtracking are also essential.''
 
-	This paper aims to fill a need from university faculty who want, for example, reform their curriculum. By presenting an updated overview of how much math is studied in various well ranked Brazilian curricula it is possible to make better decisions. The consolidated information is then compared with standards in the academia, allowing a broad and weighted view of the current math education reality in Brazilian CS undergraduate programs.
+	This paper aims to fill a need from university faculty who want, for example, to reform their curriculum. By presenting an updated overview of how much math is studied in various well ranked Brazilian curricula it is possible to make better decisions. The consolidated information is then compared with standards in the academia, allowing a broad and weighted view of the current math education reality in Brazilian CS undergraduate programs.
 	
 \section{Methodology}
 	This paper makes a comparative study of different Brazilian Computer Science programs through a quantitative comparison of the number of lecture hours in the area of mathematics both in absolute and in relative values to the total hours required for graduation. The main goal is to identify whether the selected programs have more or less emphasis on mathematics compared with two reference curricula in the area, the Brazilian Computer Society Reference Curriculum (SBC) \cite{sbc} and the Computer Science Curriculum 2008 (CS2008) made by the IEEE Computer Society and ACM joint task force \cite{cs2008}.
 
-	It is important to point out, that a quantitative assessment of the hour load allows an objective classification of studided programs, on the other hand, may be less effective in analyzing the different facets that mathematics is presented in CS programs, such as the emphasis of a particular program in the area of continuous (Calculus) or discrete mathematics (Algebra, set theory etc).
+	It is important to point out that a quantitative assessment of the hour load allows an objective classification of studided programs; on the other hand, may be less effective in analyzing the different facets that mathematics is presented in CS programs, such as the emphasis of a particular program in the area of continuous (Calculus) or discrete mathematics (Algebra, set theory etc).
 
-	The task of isolating covered topics or areas in different curricula, such as mathematics in this paper, for comparison purposes is on one hand very important as it enables objective analysis on the other hand is difficult to be done as different curricula have their own peculiarities. This is one of the challenges faced by accreditation organizations such as the European Network for Accreditation of Engineering Education (ENAEE), Accreditation Board for Engineering and Technology, Inc. (ABET) and the Asociación Iberoamericana de Instituciones de Enseñanza de la Ingeniería (ASIBEI). All of them are responsible for certifying that different Engineering curricula satisfy a common body of knowledge in order to facilitate students exchanges.
+	The task of isolating covered topics or areas in different curricula — such as mathematics in this paper —, for comparison purposes is, on one hand, very important as it enables objective analysis; on the other hand, is difficult to be done as different curricula have their own peculiarities. This is one of the challenges faced by accreditation organizations such as the European Network for Accreditation of Engineering Education (ENAEE), Accreditation Board for Engineering and Technology, Inc. (ABET) and the Asociación Iberoamericana de Instituciones de Enseñanza de la Ingeniería (ASIBEI). All of them are responsible for certifying that different Engineering curricula satisfy a common body of knowledge in order to facilitate students exchanges.
 	
 
 \begin{figure}[!t]
@@ -145,7 +135,7 @@ Email: giuliano.olguin@gmail.com}}
 \end{table}
 
 
-	The eleven Brazilian CS undergraduate programs studied were selected among other due to their 5-stars rating according to the Guia do Estudante 2012 Ranking, published by Editora Abril. \cite{guia_estudante} The list comprehends the Federal Universities of Ceará (UFC), Minas Gerais (UFMG), Campina Grande (UFCG), Pernambuco (UFPE), Rio de Janeiro (UFRJ), Rio Grande do Sul (UFRGS) and Santa Catarina (UFSC), State Universities of São Paulo (USP) and Campinas (UNICAMP) and the Pontifical Catholic University of Rio Grande do Sul (PUC-RS). USP is further sub-divided in two distinct CS programs, the one held at the Institute of Mathematics and Statistics (IME/USP) and the other held at the Institute of Mathematical Sciences and Computing (ICMC/USP).
+	The eleven Brazilian CS undergraduate programs studied were selected among others due to their 5-stars rating according to the Guia do Estudante 2012 Ranking, published by Editora Abril. \cite{guia_estudante} The list comprehends the Federal Universities of Ceará (UFC), Minas Gerais (UFMG), Campina Grande (UFCG), Pernambuco (UFPE), Rio de Janeiro (UFRJ), Rio Grande do Sul (UFRGS) and Santa Catarina (UFSC), State Universities of São Paulo (USP) and Campinas (UNICAMP) and the Pontifical Catholic University of Rio Grande do Sul (PUC-RS). USP is further sub-divided in two distinct CS programs, the one held at the Institute of Mathematics and Statistics (IME/USP) and the other held at the Institute of Mathematical Sciences and Computing (ICMC/USP).
 	
 	A side effect of this choice is that most of the programs studied are held by public universities, which must be taken into account in the data analysis since they may have different emphases in the quantity and approach in fundamentals disciplines (especially mathematics) in comparison to private universities.
 	
@@ -154,14 +144,14 @@ Email: giuliano.olguin@gmail.com}}
 \section{Reference Curricula}
 	As pointed out previously, Brazilian CS programs have their curricular contents mainly guided by two reference curricula. In an international level by the ACM/IEEE Computer Science Curriculum which current revision is from 2008 (CS2008) \cite{cs2008} and in a country level by the Brazilian Computer Society Curricular Reference from 2005 (CR2005) \cite{sbc}.
 
-	CS2008 is internally subdivided in three granularities, from the bigger to the smaller: knowledge areas, knowledge units and learning objectives. The Discrete Structures (DS) knowledge area is the only one that fits (partially) in the definition of mathematics used in this paper. More specifically, DS has the following knowledge units: Functions Relations and Sets, Basic Logic, Proof Techniques, Basics of Counting, Discrete Probability, Graphs and Trees. From these, all but Graphs and Trees were accounted as math.
+	CS2008 is internally subdivided in three granularities, from bigger to smaller: knowledge areas, knowledge units and learning objectives. The Discrete Structures (DS) knowledge area is the only one that fits (partially) in the definition of mathematics used in this paper. More specifically, DS has the following knowledge units: Functions Relations and Sets, Basic Logic, Proof Techniques, Basics of Counting, Discrete Probability, Graphs and Trees. From these, all but Graphs and Trees were accounted as math.
 
 	In accordance with CS2008, 280 lecture hours are necessary to comprise the whole obligatory curriculum, with the math area representing 39 lecture hours. \cite{cs2008} Note that CS2008 only addresses contents closely linked to Computer Science. There are no mentions on the requirements for Calculus, Linear Algebra or Differential Equations, necessary for advanced disciplines.
 
-	On the other side, CR2005 has a more broad definition of mathematics than the used in this paper. It states that the following topics fall in the area: Linear Algebra, Combinatorial Analysis, Differential and Integral Calculus, Differential Equations, Analytical Geometry, Mathematical Logic, Discrete Mathematics, Probability and Statistics and Complex Variables. CR2005 doesn't detail how much time each of these topics should receive, it only affirms that it's necessary 30 ``credits'', didatic activiy units, for the whole mathematics area. The full CR2005 curriculum requires at least 160 ``credits'' for 4-year programs or 200 ``credits'' for 5-year programs.
+	On the other side, CR2005 has a broader definition of mathematics than the one used in this paper. It states that the following topics fall in the area: Linear Algebra, Combinatorial Analysis, Differential and Integral Calculus, Differential Equations, Analytical Geometry, Mathematical Logic, Discrete Mathematics, Probability and Statistics and Complex Variables. CR2005 doesn't detail how much time each of these topics should receive, it only affirms that it's necessary 30 ``credits'', didatic activity units, for the whole mathematics area. The full CR2005 curriculum requires at least 160 ``credits'' for 4-year programs or 200 ``credits'' for 5-year programs.
 
 \section{Data}
-	Table I presents the general panorama of the eleven chosen CS programs indicating their size, location inside the university and course characteristics. While most most programs are diurnals (Full-time), with more than half of them lasting four years, it's possible to perceive two different sources of influence on the undergraduate program based on the location of the department responsible for it: In one side there are the ones that are closer to the mathematics departments in the university, IME/USP, ICMC/USP and UFRJ and the more technological ones, closer to engineering departments.
+	Table I presents the general panorama of the eleven chosen CS programs indicating their size, location inside the university and course characteristics. While most programs are diurnals (Full-time), with more than half of them lasting four years, it's possible to perceive two different sources of influence on the undergraduate program based on the location of the department responsible for it: in one side there are the ones that are closer to the mathematics departments in the university, IME/USP, ICMC/USP and UFRJ and the more technological ones, closer to engineering departments.
 
 \begin{table}
 	\centering
@@ -192,11 +182,11 @@ Email: giuliano.olguin@gmail.com}}
 
 	Analyzing the amount of hours column we can see that there is a great variability in the hour load required by the curricula of different universities and the reserved portion to math. On average 3097$h$ are required ($ \sigma = 302h $) for 4 years programs, 3270$h$ ($ \sigma = 212h $) for 4.5 years programs and 3698$h$ ($ \sigma = 986h $) for 5 years programs. Studied universities have an average of 14.47\% ($ \sigma = 4.92\% $) of disciplines exclusively in this area.
 
-	The most important fact derived from data is the fact that few CS programs achieve the minimum hour load for math according to CS2008 or CR2005. This can be better visualized in Figure 1. Only IME/USP and UFMG fully meet the standards presented, while UFRJ and UNICAMP meet only CS2008. This implies that there is no evident correlation between the location of a CS program and its mathematical bias. Despite the fact that the ICMC/USP program is located near the math and statistics departments, it didn't acheive the minimum in both standards.
+	The most important fact derived from data is that few CS programs achieve the minimum hour load for math according to CS2008 or CR2005. This can be better visualized in Figure 1. Only IME/USP and UFMG fully meet the standards presented, while UFRJ and UNICAMP meet only CS2008. This implies that there is no evident correlation between the location of a CS program and its mathematical bias. Despite the fact that the ICMC/USP program is located near the math and statistics departments, it didn't achieve the minimum in both standards.
 	
 
 \section{Future works}
-	In Brazil there are many undergraduate rankings available. Beyond Guia do Estudante, the ENADE ranking, for example, could be used to analyze a different set of universities. Just like Guia do Estudante, ENADE analyzes the infrastructure of the university and the level of graduation of professors but also applies a test on a subset of the freshmen and senior students in order to evaluate the knowledge acquired in the graduation years. \cite{enade_info} Using the Preliminary Concept of Course (CPC) available at \cite{enade} the 10 best ranked universities are: Federal Universities of Rio Grande do Sul (UFRGS), Goiás (UFG), Campina Grande (UFCG), the city of Rio de Janeiro (Fluminense - UFF), Minas Gerais (UFMG), Pelotas (UFPel), Viçosa (UFV) and the Pampa (UNIPAMPA) and the particular Universities of the West of São Paulo (UNOESTE) and of the North (UNINORTE). 
+	In Brazil there are many undergraduate rankings available. Beyond Guia do Estudante, the ENADE ranking, for example, could be used to analyze a different set of universities. Just like Guia do Estudante, ENADE analyzes the infrastructure of the university and the level of professors' graduation, but also applies a test on a subset of the freshmen and senior students in order to evaluate the knowledge acquired in the graduation years. \cite{enade_info} Using the Preliminary Concept of Course (CPC) available at \cite{enade} the 10 best ranked universities are: Federal Universities of Rio Grande do Sul (UFRGS), Goiás (UFG), Campina Grande (UFCG), the city of Rio de Janeiro (Fluminense - UFF), Minas Gerais (UFMG), Pelotas (UFPel), Viçosa (UFV) and the Pampa (UNIPAMPA) and the particular Universities of the West of São Paulo (UNOESTE) and of the North (UNINORTE). 
 	
 	With both comparisons another possibility is to analyze if there is a positive correlation between a highly ranked program in different rankings and the amount of mathematics studied during undergraduation. If so, further investigation may be necessary in order to find if there is a relation of cause and effect between the math study and the quality of an undergraduate program.
 	
@@ -301,4 +291,5 @@ Email: giuliano.olguin@gmail.com}}
 
 
 \end{document}
+
 

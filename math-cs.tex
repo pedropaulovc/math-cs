@@ -16,6 +16,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{colortbl}
 
+\IEEEoverridecommandlockouts
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 
@@ -30,13 +31,14 @@
     \IEEEauthorblockA{\IEEEauthorrefmark{2}Faculty of Education -- University of Campinas, Campinas, Brazil}
     \IEEEauthorblockA{\IEEEauthorrefmark{3}Polytechnic School -- University of São Paulo, São Paulo, Brazil\\
    	giuliano.olguin@gmail.com}
+   	\thanks{The authors would like to thank the financial support from the University of São Paulo via the Ensinar com Pesquisa grant.}
 }
 
 \maketitle
 
 
 \begin{abstract}
-    A recurring question raised by professors and undergraduate students involves the distribution of basic and practical — or professional — courses. Some authors defend a curriculum with more basic courses, such as Mathematics, Physics and Chemistry, in order to create a solid background. Moreover, there is a growth of academic exchange programs all around the world, which require a common learning base.
+    A recurring question raised by professors and undergraduate students involves the distribution of basic and practical — or professional — courses. Some authors defend a curriculum with more basic courses, such as mathematics, physics and chemistry, in order to create a solid background. Moreover, there is a growth of academic exchange programs all around the world, which require a common learning base.
 
     Since 1960, the importance of mathematics in Computer Science (CS) undergraduate curricula has been decreasing, particularly, because new fields in CS have risen and they were assimilated in the curricula. Despite of reduction, mathematics still has its role in CS's curricula.
 
@@ -81,6 +83,82 @@
 
 	The task of isolating covered topics or areas in different curricula — such as mathematics in this paper —, for comparison purposes is, on one hand, very important as it enables objective analysis; on the other hand, is difficult to be done as different curricula have their own peculiarities. This is one of the challenges faced by accreditation organizations such as the European Network for Accreditation of Engineering Education (ENAEE), Accreditation Board for Engineering and Technology, Inc. (ABET) and the Asociación Iberoamericana de Instituciones de Enseñanza de la Ingeniería (ASIBEI). All of them are responsible for certifying that different Engineering curricula satisfy a common body of knowledge in order to facilitate students exchanges.
 	
+	For this paper, are considered math disciplines those that address the areas of Calculus, Linear Algebra, Vectors, Geometry, Algebra, Proof Techniques, Counting, Probability, Statistics and Set Theory. These subjects are usually taught by the universities mathematics departments. A difficulty is that in some cases the names of the courses, or their syllabi, do not represent what is actually taught. All curricular material was read and classifications were created to select what in fact can be identified as mathematics.
+
+	The eleven Brazilian CS undergraduate programs studied were selected among others due to their 5-stars rating according to the Guia do Estudante 2012 Ranking, published by Editora Abril. \cite{guia_estudante} The list comprehends the Federal Universities of Ceará (UFC), Minas Gerais (UFMG), Campina Grande (UFCG), Pernambuco (UFPE), Rio de Janeiro (UFRJ), Rio Grande do Sul (UFRGS) and Santa Catarina (UFSC), State Universities of São Paulo (USP) and Campinas (UNICAMP) and the Pontifical Catholic University of Rio Grande do Sul (PUC-RS). USP is further sub-divided in two distinct CS programs, the one held at the Institute of Mathematics and Statistics (IME/USP) and the other held at the Institute of Mathematical Sciences and Computing (ICMC/USP).
+	
+	According to \cite{guia_estudante:metodologia}, the procedure for the definition of the ranking has the following process: The Guia do Estudante office contacts all the universities in Brazil to catalog all undergraduate programs active for the next year. Are considered for ranking those that are baccalaureates, have at least two years of existence and are classroom courses. Next, the office contacts the programs coordinatiors in order to ask them to fulfill an online questionnaire containing 15 questions specific about the program. Among the topics covered are themes relative to the faculty, scientific production and physical installations. The questionnaires are not graded, only are made available to a group of peer reviewers to help in their grading process. Even if a program does not fulfill the questionnaire it will be graded.
+
+	The survey has a group of peer reviewers composed of course coordinators, directors of departments and teachers. They are responsible for evaluating the programs on a scale ranging from 5 (excellent) to 1 (poor) and ``prefer not to opine''. Each peer reviewer assesses a maximum of 30 randomly chosen programs, preferably in the region where he teaches and excluded those programs from his institution. Each program receives grades from six consultants, the best and worst being excluded. The final score is the average of the four intermediate ones. The process has technical consultancy from Ibope Inteligência and is audited by PricewaterhouseCoopers.
+	
+	It is noteworthy that, since this is an opinion poll, the results reflect mainly the image that the course has before the academic community. A side effect of this choice is that most of the programs studied are held by public universities, which must be taken into account in the data analysis since they may have different emphases in the quantity and approach in fundamentals disciplines (especially mathematics) in comparison to private universities.
+	
+	In 2011 the Brazilian Ministry of Education applied the latest National Test of Student Performance (ENADE) on CS programs. While some universities, like USP, chose to not participate, it presents a fairly accurate estimate on how many CS programs are in Brazil. According to it, there are at least 354 programs, 258 private and 96 public. \cite{enade} 
+
+
+\section{Reference Curricula}
+	As pointed out previously, Brazilian CS programs have their curricular contents mainly guided by two reference curricula. In an international level by the ACM/IEEE Computer Science Curriculum which current revision is from 2008 (CS2008) \cite{cs2008} and in a country level by the Brazilian Computer Society Curricular Reference from 2005 (CR2005) \cite{sbc}.
+
+	CS2008 is internally subdivided in three granularities, from bigger to smaller: knowledge areas, knowledge units and learning objectives. The Discrete Structures (DS) knowledge area is the only one that fits (partially) in the definition of mathematics used in this paper. More specifically, DS has the following knowledge units: Functions Relations and Sets, Basic Logic, Proof Techniques, Basics of Counting, Discrete Probability, Graphs and Trees. From these, all but Graphs and Trees were accounted as math.
+
+	In accordance with CS2008, 280 lecture hours are necessary to comprise the whole obligatory curriculum, with the math area representing 39 lecture hours. \cite{cs2008} Note that CS2008 only addresses contents closely linked to Computer Science. There are no mentions on the requirements for Calculus, Linear Algebra or Differential Equations, necessary for advanced disciplines.
+
+	On the other side, CR2005 has a broader definition of mathematics than the one used in this paper. It states that the following topics fall in the area: Linear Algebra, Combinatorial Analysis, Differential and Integral Calculus, Differential Equations, Analytical Geometry, Mathematical Logic, Discrete Mathematics, Probability and Statistics and Complex Variables. CR2005 doesn't detail how much time each of these topics should receive, it only affirms that it's necessary 30 ``credits'', didatic activity units, for the whole mathematics area. The full CR2005 curriculum requires at least 160 ``credits'' for 4-year programs or 200 ``credits'' for 5-year programs.
+
+\section{Data}
+	Table I presents the general panorama of the eleven chosen CS programs indicating their size, location inside the university and course characteristics. While most programs are diurnals (Full-time), with the majority lasting four years, it's possible to perceive two different sources of influence on the undergraduate program based on the location of the department responsible for it: in one side there are the ones that are closer to the mathematics departments in the university, IME/USP, ICMC/USP and UFRJ and the more technological ones, closer to engineering departments.
+
+\begin{table*}
+	\centering
+	\caption{Studied CS Programs Panorama}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        University              & Period    & Organization & Foundation & Years to graduate & Students per year & Where is located                                   \\ \hline
+        ICMC/USP \cite{fuvest}  & Diurnal   & Public       & 1979       & 5                 & 100               & Institute of Mathematical Sciences and CS        \\ 
+        IME/USP \cite{fuvest}   & Diurnal   & Public       & 1970       & 4                 & 50                & Institute of Mathematics and Statistics          \\ 
+        PUC-RS\cite{vest_pucrs} & Nocturnal & Private      & 1983       & 4                 & 60                & Faculty of Informatics                           \\ 
+        UFC \cite{vest_ufc}     & Diurnal   & Public       & 1975       & 4                 & 60                & Center of Sciences                               \\ 
+        UFCG \cite{vest_ufcg}   & Diurnal   & Public       & 1977       & 4                 & 90                & Center of Eletrical Engineering and Informatics  \\ 
+        UFMG \cite{vest_ufmg}   & Diurnal   & Public       & 1978       & 4                 & 80                & Institute of Exact Sciences                      \\ 
+        UFPE \cite{vest_ufpe}   & Diurnal   & Public       & 1974       & 4.5               & 100               & Center of Informatics                            \\ 
+        UFRGS \cite{vest_ufrgs} & Diurnal   & Public       & 1983       & 4.5               & 100               & Institute of Informatics                         \\ 
+        UFRJ \cite{vest_ufrj}   & Diurnal   & Public       & 1974       & 4.5               & 50                & Institute of Mathematics                         \\ 
+        UFSC \cite{vest_ufsc}   & Diurnal   & Public       & 1976       & 4                 & 100               & Institute of Informatics and Statistics          \\ 
+        UNICAMP\cite{vest_ucp}  & Nocturnal & Public       & 1969       & 5                 & 50                & Institute of Computing                           \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+
+	Table II deals with the total time necessary to achieve graduation and the portion of this time that is dedicated to mathematics as defined previously. It is important to notice that the totals shown include elective disciplines or mandatory internships when they exist.
+
+\begin{table}
+	\centering
+	\caption{math coverage in Brazilian CS curricula}
+    \begin{tabular}{|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|}
+        \hline
+        University               & Total math hours & Total curricular hours & Percentage of math in curriculum \\ \hline
+		\rowcolor[gray]{.9}
+        ACM/IEEE \cite{cs2008}   & 39               & 280                    & 13.93\%                          \\ 
+		\rowcolor[gray]{.9}
+        SBC (4 years) \cite{sbc} & 30               & 160                    & 18.75\%                          \\ 
+        ICMC/USP \cite{icmc}     & 540              & 4395                   & 12.29\%                          \\ 
+        IME/USP \cite{ime}       & 750              & 2985                   & 25.13\%                          \\ 
+        PUC-RS \cite{pucrs}      & 300              & 3045                   & 9.85\%                           \\ 
+        UFC \cite{ufc}           & 400              & 3280                   & 12.20\%                          \\ 
+        UFCG \cite{ufcg}         & 420              & 3120                   & 13.46\%                          \\ 
+        UFMG \cite{ufmg}         & 540              & 2625                   & 20.57\%                          \\ 
+        UFPE \cite{ufpe}         & 285              & 3495                   & 8.15\%                           \\ 
+        UFRGS \cite{ufrgs}       & 360              & 3240                   & 11.11\%                          \\ 
+        UFRJ \cite{ufrj}         & 480              & 3075                   & 15.61\%                          \\ 
+        UFSC \cite{ufsc}         & 486              & 3528                   & 13.78\%                          \\ 
+        UNICAMP \cite{unicamp}   & 510              & 3000                   & 17.00\%                          \\
+        \hline
+    \end{tabular}
+\end{table}
+
+	Analyzing the amount of hours column we can see that there is a great variability in the hour load required by the curricula of different universities and the reserved portion to math. On average 3097$h$ are required ($ \sigma = 302h $) for 4 years programs, 3270$h$ ($ \sigma = 212h $) for 4.5 years programs and 3698$h$ ($ \sigma = 986h $) for 5 years programs. Studied universities have an average of 14.47\% ($ \sigma = 4.92\% $) of disciplines exclusively in this area.
+
 
 \begin{figure}[!t]
 \centering
@@ -111,89 +189,16 @@
 \caption{The proportion of mathematics in each curriculum compared with the reference curricula}
 \end{figure}
 
-	For this paper, are considered math disciplines those that address the areas of Calculus, Linear Algebra, Vectors, Geometry, Algebra, Proof Techniques, Counting, Probability, Statistics and Set Theory. These subjects are usually taught by the universities mathematics departments. A difficulty is that in some cases the names of the courses, or their syllabi, do not represent what is actually taught. All curricular material was read and classifications were created to select what in fact can be identified as mathematics.
-
-\begin{table}
-	\centering
-	\caption{Studied CS Programs Panorama}
-    \begin{tabular}{|c|c|>{\centering\arraybackslash}m{0.9cm}|>{\centering\arraybackslash}m{0.8cm}|>{\centering\arraybackslash}m{2.1cm}|}
-        \hline
-        University             & Period     & Years to graduate & Students per year & Where is located \\ \hline
-        ICMC/USP \cite{fuvest} & Diurnal    & 5               & 100               & Institute of Mathematical Sciences and CS \\ 
-        IME/USP \cite{fuvest}  & Diurnal    & 4               & 50                & Institute of Mathematics and Statistics   \\ 
-        PUC-RS\cite{vest_pucrs}& Nocturnal  & 4               & 60                & Faculty of Informatics   \\ 
-        UFC \cite{vest_ufc}    & Diurnal    & 4               & 60                & Center of Sciences   \\ 
-        UFCG \cite{vest_ufcg}  & Diurnal    & 4               & 90                & Center of Eletrical Engineering and Informatics   \\ 
-        UFMG \cite{vest_ufmg}  & Diurnal    & 4               & 80                & Institute of Exact Sciences   \\ 
-        UFPE \cite{vest_ufpe}  & Diurnal    & 4.5             & 100               & Center of Informatics   \\ 
-        UFRGS \cite{vest_ufrgs}& Diurnal    & 4.5             & 100               & Institute of Informatics   \\ 
-        UFRJ \cite{vest_ufrj}  & Diurnal    & 4.5             & 50                & Institute of Mathematics   \\ 
-        UFSC \cite{vest_ufsc}  & Diurnal    & 4               & 100               & Institute of Informatics and Statistics   \\ 
-        UNICAMP\cite{vest_ucp} & Nocturnal  & 5               & 50                & Institute of Computing   \\ 
-        \hline
-    \end{tabular}
-\end{table}
-
-
-	The eleven Brazilian CS undergraduate programs studied were selected among others due to their 5-stars rating according to the Guia do Estudante 2012 Ranking, published by Editora Abril. \cite{guia_estudante} The list comprehends the Federal Universities of Ceará (UFC), Minas Gerais (UFMG), Campina Grande (UFCG), Pernambuco (UFPE), Rio de Janeiro (UFRJ), Rio Grande do Sul (UFRGS) and Santa Catarina (UFSC), State Universities of São Paulo (USP) and Campinas (UNICAMP) and the Pontifical Catholic University of Rio Grande do Sul (PUC-RS). USP is further sub-divided in two distinct CS programs, the one held at the Institute of Mathematics and Statistics (IME/USP) and the other held at the Institute of Mathematical Sciences and Computing (ICMC/USP).
-	
-	A side effect of this choice is that most of the programs studied are held by public universities, which must be taken into account in the data analysis since they may have different emphases in the quantity and approach in fundamentals disciplines (especially mathematics) in comparison to private universities.
-	
-	In 2011 the Brazilian Ministry of Education applied the latest National Test of Student Performance (ENADE) on CS programs. While some universities, like USP, chose to not participate, it presents a fairly accurate estimate on how many CS programs are in Brazil. According to it, there are at least 354 programs, 258 private and 96 public. \cite{enade} 
-
-\section{Reference Curricula}
-	As pointed out previously, Brazilian CS programs have their curricular contents mainly guided by two reference curricula. In an international level by the ACM/IEEE Computer Science Curriculum which current revision is from 2008 (CS2008) \cite{cs2008} and in a country level by the Brazilian Computer Society Curricular Reference from 2005 (CR2005) \cite{sbc}.
-
-	CS2008 is internally subdivided in three granularities, from bigger to smaller: knowledge areas, knowledge units and learning objectives. The Discrete Structures (DS) knowledge area is the only one that fits (partially) in the definition of mathematics used in this paper. More specifically, DS has the following knowledge units: Functions Relations and Sets, Basic Logic, Proof Techniques, Basics of Counting, Discrete Probability, Graphs and Trees. From these, all but Graphs and Trees were accounted as math.
-
-	In accordance with CS2008, 280 lecture hours are necessary to comprise the whole obligatory curriculum, with the math area representing 39 lecture hours. \cite{cs2008} Note that CS2008 only addresses contents closely linked to Computer Science. There are no mentions on the requirements for Calculus, Linear Algebra or Differential Equations, necessary for advanced disciplines.
-
-	On the other side, CR2005 has a broader definition of mathematics than the one used in this paper. It states that the following topics fall in the area: Linear Algebra, Combinatorial Analysis, Differential and Integral Calculus, Differential Equations, Analytical Geometry, Mathematical Logic, Discrete Mathematics, Probability and Statistics and Complex Variables. CR2005 doesn't detail how much time each of these topics should receive, it only affirms that it's necessary 30 ``credits'', didatic activity units, for the whole mathematics area. The full CR2005 curriculum requires at least 160 ``credits'' for 4-year programs or 200 ``credits'' for 5-year programs.
-
-\section{Data}
-	Table I presents the general panorama of the eleven chosen CS programs indicating their size, location inside the university and course characteristics. While most programs are diurnals (Full-time), with more than half of them lasting four years, it's possible to perceive two different sources of influence on the undergraduate program based on the location of the department responsible for it: in one side there are the ones that are closer to the mathematics departments in the university, IME/USP, ICMC/USP and UFRJ and the more technological ones, closer to engineering departments.
-
-\begin{table}
-	\centering
-	\caption{math coverage in Brazilian CS curricula}
-    \begin{tabular}{|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|}
-        \hline
-        University               & Total math hours & Total curricular hours & Percentage of math in curriculum \\ \hline
-		\rowcolor[gray]{.9}
-        ACM/IEEE \cite{cs2008}   & 39               & 280                    & 13.93\%                          \\ 
-		\rowcolor[gray]{.9}
-        SBC (4 years) \cite{sbc} & 30               & 160                    & 18.75\%                          \\ 
-        ICMC/USP \cite{icmc}     & 540              & 4395                   & 12.29\%                          \\ 
-        IME/USP \cite{ime}       & 750              & 2985                   & 25.13\%                          \\ 
-        PUC-RS \cite{pucrs}      & 300              & 3045                   & 9.85\%                           \\ 
-        UFC \cite{ufc}           & 400              & 3280                   & 12.20\%                          \\ 
-        UFCG \cite{ufcg}         & 420              & 3120                   & 13.46\%                          \\ 
-        UFMG \cite{ufmg}         & 540              & 2625                   & 20.57\%                          \\ 
-        UFPE \cite{ufpe}         & 285              & 3495                   & 8.15\%                           \\ 
-        UFRGS \cite{ufrgs}       & 360              & 3240                   & 11.11\%                          \\ 
-        UFRJ \cite{ufrj}         & 480              & 3075                   & 15.61\%                          \\ 
-        UFSC \cite{ufsc}         & 486              & 3528                   & 13.78\%                          \\ 
-        UNICAMP \cite{unicamp}   & 510              & 3000                   & 17.00\%                          \\
-        \hline
-    \end{tabular}
-\end{table}
-
-	Table II deals with the total time necessary to achieve graduation and the portion of this time that is dedicated to mathematics as defined previously. It is important to notice that the totals shown include elective disciplines or mandatory internships when they exist.
-
-	Analyzing the amount of hours column we can see that there is a great variability in the hour load required by the curricula of different universities and the reserved portion to math. On average 3097$h$ are required ($ \sigma = 302h $) for 4 years programs, 3270$h$ ($ \sigma = 212h $) for 4.5 years programs and 3698$h$ ($ \sigma = 986h $) for 5 years programs. Studied universities have an average of 14.47\% ($ \sigma = 4.92\% $) of disciplines exclusively in this area.
-
 	The most important fact derived from data is that few CS programs achieve the minimum hour load for math according to CS2008 or CR2005. This can be better visualized in Figure 1. Only IME/USP and UFMG fully meet the standards presented, while UFRJ and UNICAMP meet only CS2008. This implies that there is no evident correlation between the location of a CS program and its mathematical bias. Despite the fact that the ICMC/USP program is located near the math and statistics departments, it didn't achieve the minimum in both standards.
 	
 
-\section{Future works}
-	In Brazil there are many undergraduate rankings available. Beyond Guia do Estudante, the ENADE ranking, for example, could be used to analyze a different set of universities. Just like Guia do Estudante, ENADE analyzes the infrastructure of the university and the level of professors' graduation, but also applies a test on a subset of the freshmen and senior students in order to evaluate the knowledge acquired in the graduation years. \cite{enade_info} Using the Preliminary Concept of Course (CPC) available at \cite{enade} the 10 best ranked universities are: Federal Universities of Rio Grande do Sul (UFRGS), Goiás (UFG), Campina Grande (UFCG), the city of Rio de Janeiro (Fluminense - UFF), Minas Gerais (UFMG), Pelotas (UFPel), Viçosa (UFV) and the Pampa (UNIPAMPA) and the particular Universities of the West of São Paulo (UNOESTE) and of the North (UNINORTE). 
+\section{Conclusions}
+	In Brazil there are many undergraduate rankings available. Beyond Guia do Estudante, the ENADE ranking, for example, could be used to analyze a different set of universities. Just like Guia do Estudante, ENADE analyzes the infrastructure of the university and the level of professors' graduation, but also applies a test on a subset of the freshmen and senior students in order to evaluate the knowledge acquired in the graduation years. \cite{enade_info} Using the Preliminary Concept of Course (CPC) available at \cite{enade} the 10 best ranked universities are: Federal Universities of Rio Grande do Sul (UFRGS), Goiás (UFG), Campina Grande (UFCG), the city of Rio de Janeiro (Fluminense - UFF), Minas Gerais (UFMG), Pelotas (UFPel), Viçosa (UFV) and the Pampa (UNIPAMPA) and the private Universities of the West of São Paulo (UNOESTE) and of the North (UNINORTE). 
 	
-	With both comparisons another possibility is to analyze if there is a positive correlation between a highly ranked program in different rankings and the amount of mathematics studied during undergraduation. If so, further investigation may be necessary in order to find if there is a relation of cause and effect between the math study and the quality of an undergraduate program.
+	With both comparisons another possibility is to analyze if there is a positive correlation between a highly ranked program in different rankings and the amount of mathematics studied during undergraduation. If so, further investigation may be necessary in order to find if there is a correlation of cause and effect between the math study and the quality of an undergraduate program.
 	
 	Finally, different studies are possible to measure the actual utility of a more theoretical topic in the professional life of a graduate. One possibility is to apply questionnaires to former students with the goal of identifying strengths and weaknesses of a curriculum.
-	
-	
-\section{Conclusions}
+
 	In this paper it was possible to see how mathematics disciplines are of great importance for a future graduate in Computer Science. It was presented that such subject is a base which needs to be robust to the development of more advanced topics which are based on it. Besides, many educators in the area of Computing with articles published in international events share that view.
 
 	Moreover, it was noted that this area is experiencing a decline in its relevance, in part by the emergence of several new trends in the market that are absorbed in undergraduate curricula.

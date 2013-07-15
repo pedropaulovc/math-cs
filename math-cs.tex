@@ -8,13 +8,25 @@
 \fi
 
 \usepackage{array}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.7}
+%\usepackage{tikz}
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=1.7}
+\usepackage{tikzexternal}
 \usepackage{array}
 \usepackage{url}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{colortbl}
+
+\tikzexternalize
+\tikzsetexternalprefix{fig/}
+
+%\usepgfplotslibrary{external}
+%\tikzexternalize[prefix=fig/]
+%\tikzset{external/system call={latex \tikzexternalcheckshellescape -halt-on-error
+%-interaction=batchmode -jobname "\image" "\texsource";
+%dvips -o "\image".ps "\image".dvi;
+%ps2eps "\image.ps"}}
 
 \IEEEoverridecommandlockouts
 
@@ -25,7 +37,7 @@
 \title{A Survey on the Mathematical Emphasis in Brazilian Computer Science Curricula}
 
 \author{
-    \IEEEauthorblockN{Pedro Paulo Vezzá Campos\IEEEauthorrefmark{1}, Jackson José Souza\IEEEauthorrefmark{1}, Giuliano Salcas Olguin\IEEEauthorrefmark{2}\IEEEauthorrefmark{3}}
+    \IEEEauthorblockN{Pedro Paulo Vezza Campos\IEEEauthorrefmark{1}, Jackson Souza\IEEEauthorrefmark{1}, Giuliano Olguin\IEEEauthorrefmark{2}\IEEEauthorrefmark{3}}
     \IEEEauthorblockA{\IEEEauthorrefmark{1}Institute of Mathematics and Statistics -- University of São Paulo, São Paulo, Brazil\\
 	\{pedrovc, jackson\}@ime.usp.br}
     \IEEEauthorblockA{\IEEEauthorrefmark{2}Faculty of Education -- University of Campinas, Campinas, Brazil}
@@ -162,34 +174,44 @@
 	Analyzing the amount of hours column we can see that there is a great variability in the hour load required by the curricula of different universities and the reserved portion to math. On average 3097$h$ are required ($ \sigma = 302h $) for 4 years programs, 3270$h$ ($ \sigma = 212h $) for 4.5 years programs and 3698$h$ ($ \sigma = 986h $) for 5 years programs. Studied universities have an average of 14.47\% ($ \sigma = 4.92\% $) of disciplines exclusively in this area.
 
 
+
+%\begin{figure}[!t]
+%\centering
+%\tikzsetnextfilename{chart_math}
+%\begin{tikzpicture}
+%	\begin{axis}[
+%	ybar,
+%	enlargelimits=0.15,
+%	legend style={at={(0.5,-0.15)},
+%	anchor=north,legend columns=-1},
+%	ylabel={\% of math in curriculum},
+%	symbolic x coords={pre,ICMC/USP,IME/USP,PUC-RS,UFC,UFCG,UFMG,UFPE,UFRGS,UFRJ,UFSC,UNICAMP,pos},
+%	xtick=data,
+%%	nodes near coords,
+%%	nodes near coords align={vertical},
+%	x tick label style={rotate=45,anchor=east},
+%	]
+%	
+%	\addplot 
+%		coordinates {(ICMC/USP,12.29) (IME/USP,25.13) (PUC-RS,9.85) (UFC,12.20) (UFCG,13.46) (UFMG,20.57) (UFPE,8.15) (UFRGS,11.11) (UFRJ,15.61) (UFSC,13.78) (UNICAMP,17.00)};
+%	\addplot[red,sharp plot]
+%		coordinates {(pre,13.93) (pos,13.93)}
+%		node[above] at (axis cs:UFMG,13.93) {ACM/IEEE};
+%	\addplot[red,sharp plot]
+%		coordinates {(pre,18.75) (pos,18.75)}
+%		node[above] at (axis cs:UFMG,18.75) {SBC};
+%\end{axis}
+%\end{tikzpicture}
+%\caption{The proportion of mathematics in each curriculum compared with the reference curricula}
+%\end{figure}
+
 \begin{figure}[!t]
 \centering
-\begin{tikzpicture}
-	\begin{axis}[
-	ybar,
-	enlargelimits=0.15,
-	legend style={at={(0.5,-0.15)},
-	anchor=north,legend columns=-1},
-	ylabel={\% of math in curriculum},
-	symbolic x coords={pre,ICMC/USP,IME/USP,PUC-RS,UFC,UFCG,UFMG,UFPE,UFRGS,UFRJ,UFSC,UNICAMP,pos},
-	xtick=data,
-%	nodes near coords,
-%	nodes near coords align={vertical},
-	x tick label style={rotate=45,anchor=east},
-	]
-	
-	\addplot 
-		coordinates {(ICMC/USP,12.29) (IME/USP,25.13) (PUC-RS,9.85) (UFC,12.20) (UFCG,13.46) (UFMG,20.57) (UFPE,8.15) (UFRGS,11.11) (UFRJ,15.61) (UFSC,13.78) (UNICAMP,17.00)};
-	\addplot[red,sharp plot]
-		coordinates {(pre,13.93) (pos,13.93)}
-		node[above] at (axis cs:UFMG,13.93) {ACM/IEEE};
-	\addplot[red,sharp plot]
-		coordinates {(pre,18.75) (pos,18.75)}
-		node[above] at (axis cs:UFMG,18.75) {SBC};
-\end{axis}
-\end{tikzpicture}
+\includegraphics{chart_math}
 \caption{The proportion of mathematics in each curriculum compared with the reference curricula}
+\label{chart_math}
 \end{figure}
+
 
 	The most important fact derived from data is that few CS programs achieve the minimum hour load for math according to CS2008 or CR2005. This can be better visualized in Figure 1. Only IME/USP and UFMG fully meet the standards presented, while UFRJ and UNICAMP meet only CS2008. This implies that there is no evident correlation between the location of a CS program and its mathematical bias. Despite the fact that the ICMC/USP program is located near the math and statistics departments, it didn't achieve the minimum in both standards.
 	
@@ -207,7 +229,7 @@
 
 	In this paper it was possible to note that mathematics, although considered an area important for the basic formation of a student in Computer Science, is experiencing a decline in its relevance, in part by the emergence of several new trends in the market that are absorbed in undergraduate curricula. 
 	
-	Finally, an analysis of the current emphasis on mathematics in eleven Brazilian CS curricula from ten different universities was conducted through the study of absolute and relative workload in the area. It was found that only two programs fully and two other partially meet the minimum hour load for mathematics in an undergraduate CS curriculum according to two different academic standards, one national and the other international.
+	An analysis of the current emphasis on mathematics in eleven Brazilian CS curricula from ten different universities was conducted through the study of absolute and relative workload in the area. It was found that only two programs fully and two other partially meet the minimum hour load for mathematics in an undergraduate CS curriculum according to two different academic standards, one national and the other international.
 	
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -296,7 +318,272 @@
 %\IEEEtriggercmd{\enlargethispage{-5in}}
 
 \bibliographystyle{IEEEtran}
-\bibliography{bibliography}
+% Generated by IEEEtran.bst, version: 1.12 (2007/01/11)
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{#1}
+\csname url@samestyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
+\providecommand{\BIBentryALTinterwordstretchfactor}{4}
+\providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand{\BIBforeignlanguage}[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+\providecommand{\BIBdecl}{\relax}
+\BIBdecl
+
+\bibitem{oliveira:origem_universidades}
+\BIBentryALTinterwordspacing
+T.~Oliveira, ``\BIBforeignlanguage{pt}{{Origem e mem\'oria das universidades
+  medievais a preserva{\c c}{\~a}o de uma institui{\c c}{\~a}o educacional}},''
+  \emph{\BIBforeignlanguage{pt}{{Varia Historia}}}, vol.~23, pp. 113 -- 129, 06
+  2007. [Online]. Available:
+  \url{http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0104-87752007000100007&nrm=iso}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ribeiro:universidade_vida_atual}
+\BIBentryALTinterwordspacing
+R.~J. Ribeiro and M.~Priore, \emph{A universidade e a vida atual: Fellini
+  n{{\~a}}o via filmes}.\hskip 1em plus 0.5em minus 0.4em\relax Editora Campus,
+  2003. [Online]. Available:
+  \url{http://books.google.com.br/books?id=ptyTtwAACAAJ}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cs2008}
+L.~Cassel, A.~Clements, G.~Davies, M.~Guzdial, R.~McCauley, A.~McGettrick,
+  B.~Sloan, L.~Snyder, P.~Tymann, and B.~Weide, ``Computer science curriculum
+  2008: An interim revision of cs 2001,'' \emph{Report from the interim review
+  task force}, 2008.
+
+\bibitem{ralston:do_need_mathematics}
+\BIBentryALTinterwordspacing
+A.~Ralston, ``Do we need any mathematics in computer science curricula?''
+  \emph{SIGCSE Bull.}, vol.~37, no.~2, pp. 6--9, Jun. 2005. [Online].
+  Available: \url{http://doi.acm.org/10.1145/1083431.1083433}
+\BIBentrySTDinterwordspacing
+
+\bibitem{kelemen:has_become_math_phobic}
+\BIBentryALTinterwordspacing
+C.~Kelemen, A.~Tucker, P.~Henderson, O.~Astrachan, and K.~Bruce, ``Has our
+  curriculum become math-phobic? (an american perspective),'' in
+  \emph{Proceedings of the 5th annual SIGCSE/SIGCUE ITiCSEconference on
+  Innovation and technology in computer science education}, ser. ITiCSE
+  '00.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2000, pp.
+  132--135. [Online]. Available: \url{http://doi.acm.org/10.1145/343048.343143}
+\BIBentrySTDinterwordspacing
+
+\bibitem{tucker:our_curriculum_math_phobic}
+A.~B. Tucker, C.~F. Kelemen, and K.~B. Bruce, ``Our curriculum has become
+  math-phobic!'' in \emph{In Proceedings of the Thirty-second SIGCSE Technical
+  Symposium on Computer Science Education}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM Press, 2001, pp. 243--247.
+
+\bibitem{cs2001}
+G.~Engel and E.~Roberts, ``Computing curricula 2001 computer science,''
+  \emph{IEEE-CS, ACM. Final Report}, 2001.
+
+\bibitem{sbc}
+M.~da~Gra{\c c}a Brasil~{Rocha}, M.~do~Carmo~{Nicoletti}, S.~C. P.~F. Fabbri,
+  E.~Barros, and A.~C. Frery, ``Currículo de refer\^encia da sbc para cursos
+  de gradua{\c c}{\~a}o em bacharelado em ci\^encia da computa{\c c}{\~a}o e
+  engenharia de computa{\c c}{\~a}o,'' \emph{Sociedade Brasileira de Computa{\c
+  c}{\~a}o}, 2005.
+
+\bibitem{guia_estudante}
+\BIBentryALTinterwordspacing
+G.~do~Estudante, ``Ci\^encia da computa{\c c}{\~a}o,'' \emph{Guia do Estudante
+  Profiss\~oes Vestibular 2012}, 2012, [Online; accessed 15-December-2012].
+  [Online]. Available:
+  \url{http://guiadoestudante.abril.com.br/profissoes/ciencias-exatas-informatica/ciencia-computacao-684528.shtml}
+\BIBentrySTDinterwordspacing
+
+\bibitem{guia_estudante:metodologia}
+------, ``As estrelas do ensino superior,'' \emph{Guia do Estudante
+  Profiss\~oes Vestibular 2013}, 2013.
+
+\bibitem{enade}
+\BIBentryALTinterwordspacing
+M.~da~Educa{\c c}{\~a}o. (2012) Conceito preliminar de curso. [Online; accessed
+  15-December-2012]. [Online]. Available:
+  \url{http://download.inep.gov.br/educacao_superior/enade/planilhas/2011/tabela_enade_cpc_2011_16_01_2013.xlsx}
+\BIBentrySTDinterwordspacing
+
+\bibitem{fuvest}
+\BIBentryALTinterwordspacing
+F.~U. para~o Vestibular. (2012) Vestibular 2013: Manual do candidato. [Online;
+  accessed 15-December-2012]. [Online]. Available:
+  \url{http://www.fuvest.br/vest2013/manual/fuv2013.manual.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_pucrs}
+\BIBentryALTinterwordspacing
+C.~de~Vestibular PUC-RS. (2012) Manual do candidato vestibular 2013. [Online;
+  accessed 15-December-2012]. [Online]. Available:
+  \url{http://www6.pucrs.br/vestibular/download/manual.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_ufc}
+\BIBentryALTinterwordspacing
+C.~de~Vestibular~UFC. (2012) Quantitativo de vagas - sisu 1º/2013 -
+  universidade federal do cear\'a. [Online; accessed 15-December-2012].
+  [Online]. Available:
+  \url{http://www.prograd.ufc.br/sisu/index.php/documentos/doc_download/45-planilha-de-vagas-e-cursos-ufc-para-2013}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_ufcg}
+\BIBentryALTinterwordspacing
+C.~S. de~Ensino do Conselho Universit\'ario~da UFCG. (2012) Resolu{\c c}{\~a}o
+  nº 10/2012. [Online; accessed 15-December-2012]. [Online]. Available:
+  \url{http://www.comprov.ufcg.edu.br/files/Vestibulares/2013/2013_1/legislacao/RESOLUCAO_N_10-2012_NUMERO_DE_VAGAS.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_ufmg}
+\BIBentryALTinterwordspacing
+C.~P. de~Vestibular~UFMG. (2012) Edital do concurso vestibular 2013. [Online;
+  accessed 15-December-2012]. [Online]. Available:
+  \url{http://web.cpv.ufmg.br/Arquivos/2012/Edital_do_Vestibular_2013.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_ufpe}
+\BIBentryALTinterwordspacing
+C.~de~Vestibular~UFPE. (2012) Manual do candidato vestibular 2013. [Online;
+  accessed 15-December-2012]. [Online]. Available:
+  \url{http://gcovest.htl.com.br/anexos/2106281392_MANUAL VEST UFPE
+  2013_finalalterado10122012.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_ufrgs}
+\BIBentryALTinterwordspacing
+C.~de~Vestibular~UFRGS. (2012) Manual do candidato vestibular 2013. [Online;
+  accessed 15-December-2012]. [Online]. Available:
+  \url{http://www.ufrgs.br/vestibular/cv2013/manual_CV2013.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_ufrj}
+\BIBentryALTinterwordspacing
+C.~de~Vestibular~UFRJ. (2012) Edital de acesso aos cursos de gradua{\c c}{\~a}o
+  2013. [Online; accessed 15-December-2012]. [Online]. Available:
+  \url{http://www.acessograduacao.ufrj.br/index.php?option=com_rokdownloads&view=file&Itemid=16&task=download&id=2760}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_ufsc}
+\BIBentryALTinterwordspacing
+C.~de~Vestibular~UFSC. (2012) Edital 04/coperve/2012. [Online; accessed
+  15-December-2012]. [Online]. Available:
+  \url{http://www.vestibular2013.ufsc.br/files/2012/07/Edital_Completo_04COPERVE2012.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vest_ucp}
+\BIBentryALTinterwordspacing
+C.~de~Vestibular~UNICAMP. (2012) Rela{\c c}{\~a}o de cursos. [Online; accessed
+  15-December-2012]. [Online]. Available:
+  \url{http://www.comvest.unicamp.br/cursos/cursos.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{icmc}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encias~de Computa{\c c}{\~a}o~ICMC/USP. (2012) Curr\'iculo
+  do curso de bacharelado em ci\^encias de computa{\c c}{\~a}o. [Online;
+  accessed 15-December-2012]. [Online]. Available:
+  \url{https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=55&codcur=55041&codhab=0&tipo=N}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ime}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~IME/USP. (2012) Bacharelado em
+  ci\^encia da computa{\c c}{\~a}o: Curriculo 2013. [Online; accessed
+  15-December-2012]. [Online]. Available:
+  \url{http://bcc.ime.usp.br/catalogo2013/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{pucrs}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~PUC/RS. (2012) Facin -
+  ci\^encia da computa{\c c}{\~a}o - estrutura curricular. [Online; accessed
+  15-December-2012]. [Online]. Available:
+  \url{http://www3.pucrs.br/portal/page/portal/facinuni/facinuniCapa/facinuniGraduacao/facinuniGraduacaoCC/facinuniGraduacaoCCEstrutura}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ufc}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~UFC. (2012) Compufc matriz
+  curricular. [Online; accessed 15-December-2012]. [Online]. Available:
+  \url{http://www.lia.ufc.br/~riverson/cbc/novocurr.pdf.gz}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ufcg}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~UFCG. (2012) Plano de curso
+  -computa{\c c}{\~a}o ufcg. [Online; accessed 15-December-2012]. [Online].
+  Available: \url{http://www.computacao.ufcg.edu.br/graduacao/plano-de-curso}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ufmg}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~UFMG. (2012) Grade curricular
+  curso: Ci\^encia da computa{\c c}{\~a}o modalidade/habilita{\c c}{\~a}o:
+  Bacharelado - vers{\~a}o 2011/2. [Online; accessed 15-December-2012].
+  [Online]. Available:
+  \url{http://www.dcc.ufmg.br/dcc/images/arquivos/EstruturaCurricularBCC2012.1.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ufpe}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~UFPE. (2012) Curso: Ci\^encia
+  da computa{\c c}{\~a}o - cin perfil: 2002-1 relatório perfil curricular.
+  [Online; accessed 15-December-2012]. [Online]. Available:
+  \url{www.ufpe.br/proacad/images/cursos_ufpe/ciencia_da_computacao_perfil_2002.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ufrgs}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~UFRGS. (2012) Ci\^encia da
+  computa{\c c}{\~a}o. [Online; accessed 15-December-2012]. [Online].
+  Available:
+  \url{http://www.ufrgs.br/ufrgs/ensino/graduacao/cursos/exibeCurso?cod_curso=305}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ufrj}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~UFRJ. (2012) Disciplinas -
+  ci\^encia da computa{\c c}{\~a}o. [Online; accessed 15-December-2012].
+  [Online]. Available:
+  \url{https://www.siga.ufrj.br/sira/temas/zire/frameConsultas.jsp?mainPage=/repositorio-curriculo/FA9F18A7-92A4-F79B-1A98-293E97D8939B.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ufsc}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encias~da Computa{\c c}{\~a}o~UFSC. (2012) Curr\'iculo do
+  curso 208 - ci\^encias da computa{\c c}{\~a}o. [Online; accessed
+  15-December-2012]. [Online]. Available:
+  \url{http://www.cagr.ufsc.br/relatorios/curriculoCurso?curso=208}
+\BIBentrySTDinterwordspacing
+
+\bibitem{unicamp}
+\BIBentryALTinterwordspacing
+C.~do~Curso de Ci\^encia~da Computa{\c c}{\~a}o~UNICAMP. (2012) 42 - ci\^encia
+  da computa{\c c}{\~a}o - curr\'iculo pleno. [Online; accessed
+  15-December-2012]. [Online]. Available:
+  \url{http://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2012/curriculoPleno/cp42.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{enade_info}
+\BIBentryALTinterwordspacing
+M.~da~Educa{\c c}{\~a}o. (2012) Acesso \`a universidade - enade. [Online;
+  accessed 15-December-2012]. [Online]. Available:
+  \url{http://www.brasil.gov.br/sobre/educacao/acesso-a-universidade/enade}
+\BIBentrySTDinterwordspacing
+
+\end{thebibliography}
 
 
 \end{document}

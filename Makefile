@@ -7,5 +7,5 @@ document : $(DOCUMENT).tex
 	pdflatex $(DOCUMENT).tex
 
 clean :
-	rm -f *.aux *.bbl *.log *.out *.toc *.blg *~ *.pdf
+	rm -f *.aux *.bbl *.log *.out *.toc *.blg *~ math-cs.pdf *.dvi
 

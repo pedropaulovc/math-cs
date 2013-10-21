@@ -29,8 +29,27 @@
 \usepackage{graphicx}
 \usepackage{array}
 \usepackage{colortbl}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\pgfplotsset{compat=1.7}
 
+\definecolor{n_red}{HTML}{D7191C}
+\definecolor{n_orange}{HTML}{FD9B61}
+\definecolor{n_green}{HTML}{3F745A}
+\definecolor{n_green_bg}{HTML}{AAE6C9}
+\definecolor{n_blue}{HTML}{2B83BA}
+\definecolor{n_violet}{HTML}{AC146D}
+\definecolor{n_yellow}{HTML}{D2D221}
+\definecolor{RawSienna}{cmyk}{0,0.72,1,0.45}
+\definecolor{olive}{rgb}{0.3, 0.4, .1}
 
+\newenvironment{colorblock}[3]{%
+  \setbeamercolor{block body}{#2}
+  \setbeamercolor{block title}{#3}
+  \begin{block}{#1}}{\end{block}}
+  
 \title{A Survey on the Mathematical Emphasis in Brazilian Computer Science Curricula}
 
 %\subtitle{}
@@ -90,8 +109,26 @@ Curricula}
 \end{frame}
 
 \begin{frame}
-\frametitle{Contents}
-\tableofcontents
+\frametitle{Outline}
+\begin{colorblock}{Introduction}{bg=n_violet!5}{bg=n_violet!100}
+	\begin{itemize}
+		\item Trends in higher education
+		\item Decreasing focus in mathematics
+	\end{itemize}
+\end{colorblock}
+
+\begin{colorblock}{Methodology \& Data}{bg=n_violet!5}{bg=n_violet!100}
+	\begin{itemize}
+		\item Mathematics in Brazilian CS programs
+	\end{itemize}
+\end{colorblock}
+
+\begin{colorblock}{Conclusions}{bg=n_violet!5}{bg=n_violet!100}
+	\begin{itemize}
+		\item Is math actually loosing space?
+	\end{itemize}
+\end{colorblock}
+%\tableofcontents
 % You might wish to add the option [pausesections]
 \end{frame}
 
@@ -103,23 +140,23 @@ Curricula}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Trends}
+\frametitle{Trends in CS education}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-	\begin{block}{Mission I}
+	\begin{colorblock}{Mission I}{bg=n_green_bg!30}{bg=n_green!100}
 		\begin{itemize}
 			\item Tackle current problems of society
 			\item Focus on technical knowledge
 		\end{itemize}
-	\end{block}
+	\end{colorblock}
 \end{column}
 \begin{column}{0.5\textwidth}
-	\begin{block}{Mission II}
+	\begin{colorblock}{Mission II}{bg=n_green_bg!30}{bg=n_green!100}
 		\begin{itemize}
 			\item Glimpse the future
 			\item Focus on academic knowledge
 		\end{itemize}
-	\end{block}
+	\end{colorblock}
 \end{column}
 \end{columns}
 
@@ -131,10 +168,13 @@ Curricula}
 
 \begin{quote}
 Universities are primarily in the business of positive human development. They
-focus on enhancing the abilities of our graduates to \textbf{communicate clearly
-and effectively}, to \textbf{analyze}, to \textbf{confront ambiguity} with clear methods and
-confidence, to \textbf{break down problems} into manageable parts, to \textbf{think critically}
-and to \textbf{question deeply}.\\
+focus on enhancing the abilities of our graduates to
+\textbf{\textcolor{n_red}{communicate clearly and effectively}}, to
+\textbf{\textcolor{RawSienna}{analyze}}, to
+\textbf{\textcolor{olive}{confront ambiguity}} with clear methods and
+confidence, to \textbf{\textcolor{n_green}{break down problems}} into manageable parts, to
+\textbf{\textcolor{n_blue}{think critically}}
+and to \textbf{\textcolor{n_violet}{question deeply}}.\\
 \hfill --- \textup{Max Blouw} \footnote{\tiny Blouw, M. (2013) ``Universities should
 educate -- employers should train.'' [Online; accessed Oct 14, 2013] Available:
 \url{http://www.theglobeandmail.com/commentary/universities-should-educate-employers-should-train/article14078938/}}
@@ -145,8 +185,8 @@ educate -- employers should train.'' [Online; accessed Oct 14, 2013] Available:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{The interplay between theory and practice}
-The technology area is a strong example on how \textbf{standard procedures} inside the
-industry are \textbf{constantly changing}.
+The technology area is a strong example on how \textbf{\textcolor{olive}{standard procedures}} inside the
+industry are \textbf{\textcolor{n_red}{constantly changing}}.
 
 \begin{block}{Challenges}
 	\begin{itemize}
@@ -163,10 +203,11 @@ industry are \textbf{constantly changing}.
 \begin{frame}
 \frametitle{The interplay between theory and practice}
 \begin{quote}
-A fundamental aspect of computer science is the \textbf{balance between theory and
-practice and the essential link between them}. Graduates of a computer science
+A fundamental aspect of computer science is the 
+\textbf{\textcolor{n_red}{balance between theory and
+practice and the essential link between them}}. Graduates of a computer science
 program must understand not only the theoretical underpinnings of the discipline
-but also how that \textbf{theory influences practice}. \\
+but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
 \hfill --- \textup{CS2008}
 \footnote{\tiny ACM/IEEE Joint Task Force (2008) ``Computer Science Curriculum
 2008: An interim revision of CS2001.''}
@@ -178,11 +219,13 @@ but also how that \textbf{theory influences practice}. \\
 \begin{frame}
 \frametitle{Decreasing focus on mathematics}
 \begin{itemize}
-	\item CS is a broad field that connects to and draws from many disciplines, 
+	\item CS is a \textbf{\textcolor{n_violet}{broad field}} that
+	\textbf{\textcolor{n_blue}{connects to and draws from many disciplines}}, 
 	including mathematics, electrical engineering, psychology, statistics, fine 
 	arts, linguistics, and physical and life sciences.
-	\item The role of mathematics in reference curricula has been decreasing
-	gradually since at least the 1960s, although at a lower rate today. 
+	\item The \textbf{\textcolor{n_green}{role of mathematics}} in reference
+	curricula has been \textbf{\textcolor{n_red}{decreasing gradually}} since at
+	least the 1960s, although at a lower rate today. 
 	\footnote{\tiny A. Ralston ``Do we need any mathematics in computer science
 	curricula?'' \emph{SIGCSE Bull.}, vol 37, no. 2, pp 6-9, Jun 2005.}
 	\footnote{\tiny A. B. Tucker ``Our curriculum has become math-phobic!'' in
@@ -197,9 +240,9 @@ but also how that \textbf{theory influences practice}. \\
 \begin{frame}
 \frametitle{Case Study: Panorama on the study of mathematics in Brazil}
 \begin{itemize}
-	\item Overview of how much math is studied in various well ranked Brazilian
-	CS programs
-	\item Objective analysis through a quantitative analysis
+	\item Overview of \textbf{\textcolor{n_red}{how much math}} is studied in
+	eleven \textbf{\textcolor{n_blue}{well ranked Brazilian CS programs}}
+	\item Objective analysis through a \textbf{\textcolor{n_violet}{quantitative analysis}}
 	\item Comparison with reference curricula
 	\item Useful for curriculum reforms
 \end{itemize}
@@ -213,26 +256,12 @@ but also how that \textbf{theory influences practice}. \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Map of Brazil}
-\begin{figure}[htp]
-\begin{center}
-  \includegraphics[height=6cm]{brazil_map.png}
-  \caption[map]{Map of Brazil with the studied universities \footnote{\tiny
-  Image courtesy of Wikipedia, the Free Encyclopedia}}
-\end{center}
-\end{figure}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
 \frametitle{Definition of mathematics}
 \begin{columns}
 \begin{column}{0.5\textwidth}
 	\begin{itemize}
 		\item Calculus
 		\item Linear Algebra
-		\item Vector
 		\item Geometry
 		\item Set Theory
 	\end{itemize}
@@ -240,8 +269,7 @@ but also how that \textbf{theory influences practice}. \\
 \begin{column}{0.5\textwidth}
 	\begin{itemize}
 		\item Algebra
-		\item Proof Techniques
-		\item Counting
+		\item Discrete mathematics
 		\item Probability
 		\item Statistics
 	\end{itemize}
@@ -254,12 +282,13 @@ but also how that \textbf{theory influences practice}. \\
 \begin{frame}
 \frametitle{Selected CS Programs}
 \begin{itemize}
-	\item Brazil has more than 350 different CS programs
-	\item The eleven selected ones were ranked as 5-stars by the \emph{Guia do
+	\item Brazil has more than \textbf{\textcolor{n_red}{350 CS programs}}
+	\item The \textbf{\textcolor{n_green}{eleven}} selected ones were ranked as 
+	\textbf{\textcolor{n_violet}{5-stars}} by the \emph{Guia do
 	Estudante} ranking. 
-	\item The ranking consists of an opinion poll among professors, course
+	\item The ranking consists of an \textbf{\textcolor{olive}{opinion poll}} among professors, course
 	coordinators and directors of departments.
-	\item Each program is graded by six different reviewers, extremes are excluded
+	\item Each program is \textbf{\textcolor{RawSienna}{graded by six different reviewers}}, extremes are excluded
 	\item Ranking audited by PricewaterhouseCoopers
 \end{itemize}
 \end{frame}
@@ -269,13 +298,28 @@ but also how that \textbf{theory influences practice}. \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
+%\frametitle{Map of Brazil}
+\begin{figure}[htp]
+\begin{center}
+  \includegraphics[height=7cm]{brazil_map.png}
+  \caption[map]{Map of Brazil with the studied universities \footnote{\tiny
+  Image courtesy of Wikipedia, the Free Encyclopedia}}
+\end{center}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
 \begin{table}
 	\scriptsize
 	\caption{Studied CS Programs Panorama}
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
         University  & Period    & Organization & Foundation   \\ \hline
+        \rowcolor[gray]{.8}
         ICMC/USP    & Diurnal   & Public       & 1979         \\ 
+        \rowcolor[gray]{.8}
         IME/USP     & Diurnal   & Public       & 1970         \\ 
         PUC-RS      & Nocturnal & Private      & 1983         \\ 
         UFC         & Diurnal   & Public       & 1975         \\ 
@@ -283,6 +327,7 @@ but also how that \textbf{theory influences practice}. \\
         UFMG        & Diurnal   & Public       & 1978         \\ 
         UFPE        & Diurnal   & Public       & 1974         \\ 
         UFRGS       & Diurnal   & Public       & 1983         \\ 
+        \rowcolor[gray]{.8}
         UFRJ        & Diurnal   & Public       & 1974         \\ 
         UFSC        & Diurnal   & Public       & 1976         \\ 
         UNICAMP     & Nocturnal & Public       & 1969         \\
@@ -299,7 +344,9 @@ but also how that \textbf{theory influences practice}. \\
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
         University   & Years & Students/year & Where is located                                   \\ \hline
+        \rowcolor[gray]{.8}
         ICMC/USP     & 5     & 100   & Institute of Mathematical Sciences and CS        \\ 
+        \rowcolor[gray]{.8}
         IME/USP      & 4     & 50    & Institute of Mathematics and Statistics          \\ 
         PUC-RS       & 4     & 60    & Faculty of Informatics                           \\ 
         UFC          & 4     & 60    & Center of Sciences                               \\ 
@@ -307,6 +354,7 @@ but also how that \textbf{theory influences practice}. \\
         UFMG         & 4     & 80    & Institute of Exact Sciences                      \\ 
         UFPE         & 4.5   & 100   & Center of Informatics                            \\ 
         UFRGS        & 4.5   & 100   & Institute of Informatics                         \\ 
+        \rowcolor[gray]{.8}
         UFRJ         & 4.5   & 50    & Institute of Mathematics                         \\ 
         UFSC         & 4     & 100   & Institute of Informatics and Statistics          \\ 
         UNICAMP      & 5     & 50    & Institute of Computing                           \\
@@ -319,7 +367,7 @@ but also how that \textbf{theory influences practice}. \\
 \begin{frame}
 \begin{figure}[!t]
 \centering
-\includegraphics{../chart_math.pdf}
+\includegraphics{../chart_math_two_colors.pdf}
 \caption{The proportion of mathematics in each curriculum compared with the reference curricula}
 \label{chart_math}
 \end{figure}
@@ -336,12 +384,15 @@ but also how that \textbf{theory influences practice}. \\
 \begin{frame}
 \frametitle{Future work}
 \begin{itemize}
-	\item Reapply the analysis with other rankings (Eg. ENADE ranking made
-	by the Brazilian Ministry of Education)
-	\item Is there any correlation between being well ranked and the amount of
-	math studied?
-	\item How useful was mathematics after graduation? Apply questionnaires to
-	analyze the strengths and weaknesses of a curriculum.
+	\item Reapply the analysis with \textbf{\textcolor{n_red}{other rankings}}
+	(Eg. ENADE ranking made by the Brazilian Ministry of Education)
+	\item Is there any \textbf{\textcolor{olive}{correlation}} between being
+	\textbf{\textcolor{n_violet}{well ranked}} and the
+	\textbf{\textcolor{RawSienna}{amount of math}} studied?
+	\item How \textbf{\textcolor{n_green}{useful}} was mathematics after
+	graduation? Apply \textbf{\textcolor{n_blue}{questionnaires}} to
+	analyze the strengths and weaknesses of
+	a curriculum.
 \end{itemize}
 \end{frame}
 
@@ -349,10 +400,12 @@ but also how that \textbf{theory influences practice}. \\
 \begin{frame}
 \frametitle{This paper}
 \begin{itemize}
-	\item Analyzed the different perspectives of teaching at universities and 
-	opinions related
-	\item Noted the decline of the teaching of mathematics in CS both as a trend
-	in reference curricula and in eleven different CS programs in Brazil
+	\item Analyzed the \textbf{\textcolor{n_red}{different perspectives}} of
+	teaching at universities and \textbf{\textcolor{n_green}{opinions}} related
+	\item Noted the \textbf{\textcolor{n_violet}{decline}} of the teaching of
+	\textbf{\textcolor{RawSienna}{mathematics}} in CS both as a trend in reference
+	curricula and in eleven
+	different CS programs in Brazil
 \end{itemize}
 \end{frame}
 

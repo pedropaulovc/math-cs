@@ -1,0 +1,100 @@
+Hello everyone, I'm Pedro Paulo. I'm an undergraduate student from the University of São Paulo and today, I'll be presenting this paper: A Survey on the Mathematical Emphasis in Computer Science Curricula.
+
+=================================================
+
+This paper has the following outline:
+
+ - First, I'd like to present you a broad view of current enducation trends applied to CS education
+ 
+   It will also be important to note how mathematics has already been loosing space in CS in terms of standard curricula
+   
+ - Second, in the Methodology and Data parts, I am going to present the study developed in this work. This case study analyzes the mathematical focus in eleven well ranked CS programs in Brazil.
+ 
+ - Finally, in the final block of this presentation, I'll draw some conclusions and interpret if math is actually loosing space
+ 
+
+Before I start, I'd like to briefly introduce you to my motivation for this work:
+ - I am part of a committee of faculty plus students responsible to reform the current Computer Science curriculum of the CS Department of the Institute of Mathematics and Statistics, which I am part.
+ - Is a common complain among students, the high load of math in the curriculum
+ - The faculty is interested in finding how different is the IME/USP CS curriculum compared other curricula that is used in different CS programs across Brazil.
+
+=================================================
+
+Starting the Introduction block of the presentation, here are two different, and often complimentary trends that are present in CS education.
+
+The first trend may be called a "Technical" trend, as it has a greater interest on tackling the current problems of society. Its focus on applying the technical knowledge to solve those problems has a consequence of helping the immediate employability of a student.
+
+The second trend may be known as an "Academic" trend. This one also has a focus on solving problems. The difference is that it applies a more abstract reasoning, glimpsing the future.
+
+I'd like to stress on how there is no dicothomy between these two trends. Some courses in a same program may tend to have a technical focus while others may have an academical focus.
+
+=================================================
+
+Now, that being said, what is the common denominator of these two trends?
+
+This quote from Max Blouw, president and vice-chancellor of Wilfrid Laurier University in Waterloo, Ontario, Canada, is from the article "Universities should educate -- employers should train" summarizes with remarks of mine:
+
+Universities are primarily in the business of positive human development.
+
+They focus on enhancing the abilities of our graduates to communicate clearly and effectively, to analyze, to confront ambiguity with clear methods and confidence, to break down problems into manageable parts, to think critically and to question deeply.
+
+=================================================
+
+One may think that theoretical knowledge is of all importance, but let's not "drink the kool aid". This excerpt extracted from the CS2008 curriculum made by ACM and IEEE makes a point. Again, the remarks are mine.
+
+A fundamental aspect of computer science is the balance between theory and practice and the essential link between them.
+
+Graduates of a computer science program must understand not only the theoretical underpinnings of the discipline but also how that theory influences practice.
+
+=================================================
+
+Now in terms of mathematics, computer science has a deep connection with the field. As it may be noted, it connects and draws from many disciplines, some of which are described here.
+
+That being said, the bibliography, for example the two papers described here note that since at least the 1960s the role of mathematics has been decrasing, although at a lower rate today.
+
+=================================================
+
+
+
+=================================================
+
+
+
+=================================================
+
+
+
+=================================================
+
+
+
+=================================================
+
+
+
+=================================================
+
+
+
+=================================================
+
+
+
+=================================================
+
+
+
+
+=================================================
+Thank you for you presence!
+
+As a last reminder, I'd like to thank both the Ensinar com Pesquisa and the Pro-Int grants from the Universty of São Paulo. I would't be here without their support.
+
+Now, this presentation was a bit shorter than normal in order to open space to a discussion on your experience as faculty in many different technological programs.
+
+For instance, do you feel that math is being useful to your students?
+
+Do they retain the knowledge after a period of time or you have to review some concept previously taught in order to use it in a more advanced course?
+
+
+

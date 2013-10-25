@@ -112,7 +112,7 @@ Curricula}
 \frametitle{Outline}
 \begin{colorblock}{Introduction}{bg=n_violet!5}{bg=n_violet!100}
 	\begin{itemize}
-		\item Trends in higher education
+		\item Trends in CS education
 		\item Decreasing focus in mathematics
 	\end{itemize}
 \end{colorblock}
@@ -143,7 +143,7 @@ Curricula}
 \frametitle{Trends in CS education}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-	\begin{colorblock}{Mission I}{bg=n_green_bg!30}{bg=n_green!100}
+	\begin{colorblock}{Technical}{bg=n_green_bg!30}{bg=n_green!100}
 		\begin{itemize}
 			\item Tackle current problems of society
 			\item Focus on technical knowledge
@@ -151,9 +151,9 @@ Curricula}
 	\end{colorblock}
 \end{column}
 \begin{column}{0.5\textwidth}
-	\begin{colorblock}{Mission II}{bg=n_green_bg!30}{bg=n_green!100}
+	\begin{colorblock}{Academic}{bg=n_green_bg!30}{bg=n_green!100}
 		\begin{itemize}
-			\item Glimpse the future
+			\item Tackle problems in a more abstract way
 			\item Focus on academic knowledge
 		\end{itemize}
 	\end{colorblock}
@@ -245,6 +245,8 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
 	\item Objective analysis through a \textbf{\textcolor{n_violet}{quantitative analysis}}
 	\item Comparison with reference curricula
 	\item Useful for curriculum reforms
+	\item Problem: \textbf{\textcolor{RawSienna}{Does not account the focus}}
+	in a particular area, continuous or discrete math, for instance.
 \end{itemize}
 \end{frame}
 
@@ -293,6 +295,36 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
 \end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Reference Curricula}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+	\begin{colorblock}{ACM/IEEE CS2008}{bg=RawSienna!10}{bg=RawSienna!70}
+		\begin{itemize}
+%			\item Divided in \emph{knowledge areas} (KAs)
+			\item KA of interest: \textbf{\textcolor{n_red}{Discrete Structures}}
+			\item No mentions on calculus, linear algebra, differential equations, etc
+			\item ``Bare minimum'' for CS
+		\end{itemize}
+	\end{colorblock}
+\end{column}
+\begin{column}{0.5\textwidth}
+	\begin{colorblock}{SBC CR2005}{bg=RawSienna!10}{bg=RawSienna!70}
+		\begin{itemize}
+			\item Divided in six blocks, mathematics is one of these
+			\item \textbf{\textcolor{n_blue}{Similar definition of math}}
+			compared to this paper
+		\end{itemize}
+	\end{colorblock}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data}
 \subsection{}
 
@@ -317,9 +349,9 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
         University  & Period    & Organization & Foundation   \\ \hline
-        \rowcolor[gray]{.8}
+        \rowcolor{n_green!40}
         ICMC/USP    & Diurnal   & Public       & 1979         \\ 
-        \rowcolor[gray]{.8}
+        \rowcolor{n_green!40}
         IME/USP     & Diurnal   & Public       & 1970         \\ 
         PUC-RS      & Nocturnal & Private      & 1983         \\ 
         UFC         & Diurnal   & Public       & 1975         \\ 
@@ -327,7 +359,7 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
         UFMG        & Diurnal   & Public       & 1978         \\ 
         UFPE        & Diurnal   & Public       & 1974         \\ 
         UFRGS       & Diurnal   & Public       & 1983         \\ 
-        \rowcolor[gray]{.8}
+        \rowcolor{n_green!40}
         UFRJ        & Diurnal   & Public       & 1974         \\ 
         UFSC        & Diurnal   & Public       & 1976         \\ 
         UNICAMP     & Nocturnal & Public       & 1969         \\
@@ -344,9 +376,9 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
         University   & Years & Students/year & Where is located                                   \\ \hline
-        \rowcolor[gray]{.8}
+        \rowcolor{n_green!40}
         ICMC/USP     & 5     & 100   & Institute of Mathematical Sciences and CS        \\ 
-        \rowcolor[gray]{.8}
+        \rowcolor{n_green!40}
         IME/USP      & 4     & 50    & Institute of Mathematics and Statistics          \\ 
         PUC-RS       & 4     & 60    & Faculty of Informatics                           \\ 
         UFC          & 4     & 60    & Center of Sciences                               \\ 
@@ -354,7 +386,7 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
         UFMG         & 4     & 80    & Institute of Exact Sciences                      \\ 
         UFPE         & 4.5   & 100   & Center of Informatics                            \\ 
         UFRGS        & 4.5   & 100   & Institute of Informatics                         \\ 
-        \rowcolor[gray]{.8}
+        \rowcolor{n_green!40}
         UFRJ         & 4.5   & 50    & Institute of Mathematics                         \\ 
         UFSC         & 4     & 100   & Institute of Informatics and Statistics          \\ 
         UNICAMP      & 5     & 50    & Institute of Computing                           \\
@@ -382,22 +414,6 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Future work}
-\begin{itemize}
-	\item Reapply the analysis with \textbf{\textcolor{n_red}{other rankings}}
-	(Eg. ENADE ranking made by the Brazilian Ministry of Education)
-	\item Is there any \textbf{\textcolor{olive}{correlation}} between being
-	\textbf{\textcolor{n_violet}{well ranked}} and the
-	\textbf{\textcolor{RawSienna}{amount of math}} studied?
-	\item How \textbf{\textcolor{n_green}{useful}} was mathematics after
-	graduation? Apply \textbf{\textcolor{n_blue}{questionnaires}} to
-	analyze the strengths and weaknesses of
-	a curriculum.
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
 \frametitle{This paper}
 \begin{itemize}
 	\item Analyzed the \textbf{\textcolor{n_red}{different perspectives}} of
@@ -411,6 +427,22 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
+\frametitle{Future work}
+\begin{itemize}
+	\item Apply the analysis with \textbf{\textcolor{n_red}{other rankings}}
+	(Eg. ENADE ranking made by the Brazilian Ministry of Education)
+	\item Is there any \textbf{\textcolor{olive}{correlation}} between being
+	\textbf{\textcolor{n_violet}{well ranked}} and the
+	\textbf{\textcolor{RawSienna}{amount of math}} studied?
+	\item How \textbf{\textcolor{n_green}{useful}} was mathematics after
+	graduation? Apply \textbf{\textcolor{n_blue}{questionnaires}} to
+	analyze the strengths and weaknesses of
+	a curriculum.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
 \frametitle{}
 
 \begin{center}
@@ -418,42 +450,46 @@ but also how that \textbf{\textcolor{olive}{theory influences practice}}. \\
 \Large Questions?
 \end{center}
 
+\begin{block}{Acknowledgements}
+This work was partially supported by the \emph{Ensinar com Pesquisa} and
+\emph{Pró-Int} grants from the University of São Paulo.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\titlepage
 \end{frame}
 
 
+\appendix
 
-
-
-
-
-
-
-%\begin{frame}
-%\begin{table}
-%	\centering
-%	\caption{math coverage in Brazilian CS curricula}
-%    \begin{tabular}{|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|}
-%        \hline
-%        University   & Total math hours & Total curricular hours & Percentage of math in curriculum \\ \hline
-%		\rowcolor[gray]{.9}
-%        ACM/IEEE     & 39   & 280        & 13.93\%                          \\ 
-%		\rowcolor[gray]{.9}
-%        SBC (4 years)& 30   & 160        & 18.75\%                          \\ 
-%        ICMC/USP     & 540  & 4395       & 12.29\%                          \\ 
-%        IME/USP      & 750  & 2985       & 25.13\%                          \\ 
-%        PUC-RS       & 300  & 3045       & 9.85\%                           \\ 
-%        UFC          & 400  & 3280       & 12.20\%                          \\ 
-%        UFCG         & 420  & 3120       & 13.46\%                          \\ 
-%        UFMG         & 540  & 2625       & 20.57\%                          \\ 
-%        UFPE         & 285  & 3495       & 8.15\%                           \\ 
-%        UFRGS        & 360  & 3240       & 11.11\%                          \\ 
-%        UFRJ         & 480  & 3075       & 15.61\%                          \\ 
-%        UFSC         & 486  & 3528       & 13.78\%                          \\ 
-%        UNICAMP      & 510  & 3000       & 17.00\%                          \\
-%        \hline
-%    \end{tabular}
-%\end{table}
-%\end{frame}
+\begin{frame}
+\begin{table}
+	\scriptsize
+	\caption{Math coverage in Brazilian CS curricula}
+    \begin{tabular}{|c|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{1cm}|>{\centering\arraybackslash}m{2cm}|}
+        \hline
+        University   & Total math hours & Total curricular hours & Percentage of math in curriculum \\ \hline
+		\rowcolor{n_green!40}
+        ACM/IEEE     & 39   & 280        & 13.93\%                          \\ 
+		\rowcolor{n_green!40}
+        SBC (4 years)& 30   & 160        & 18.75\%                          \\ 
+        ICMC/USP     & 540  & 4395       & 12.29\%                          \\ 
+        IME/USP      & 750  & 2985       & 25.13\%                          \\ 
+        PUC-RS       & 300  & 3045       & 9.85\%                           \\ 
+        UFC          & 400  & 3280       & 12.20\%                          \\ 
+        UFCG         & 420  & 3120       & 13.46\%                          \\ 
+        UFMG         & 540  & 2625       & 20.57\%                          \\ 
+        UFPE         & 285  & 3495       & 8.15\%                           \\ 
+        UFRGS        & 360  & 3240       & 11.11\%                          \\ 
+        UFRJ         & 480  & 3075       & 15.61\%                          \\ 
+        UFSC         & 486  & 3528       & 13.78\%                          \\ 
+        UNICAMP      & 510  & 3000       & 17.00\%                          \\
+        \hline
+    \end{tabular}
+\end{table}
+\end{frame}
 
 
 %\begin{frame}

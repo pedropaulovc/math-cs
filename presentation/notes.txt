@@ -54,19 +54,88 @@ That being said, the bibliography, for example the two papers described here not
 
 =================================================
 
+This leads us to the case study described in this work.
 
+Here, we make a quantitative analysis of eleven well ranked Brazilian CS programs. The ranking will be detailed in the following slides.
+
+The results are compared with two reference curricula, the CS2008 provided by a joint venture of the ACM with IEEE.
+
+It is noteworthy that this case study is, as explained before, suitable for a curriculum reform.
+
+Despite this, the case study does not account any focus given by a particular CS program, continuous or discrete math, for example.
 
 =================================================
 
+In terms of reference curricula, we adopted two diffeent sources:
 
+One international, the Computer Science Curriculum 2008, provided by a joint taskforce of the ACM and IEEE Computer Society.
+
+The other is national, the Currículo de Referência 2005, provided by the Brazilian Computer Society.
+
+Speaking of the CS2008, it is divided into 14 Knowledge Areas like "Algoritms and Complexity", "Architecture and Organization" and "Discrete Structures".
+
+The latter is the knowledge area of interest of this paper.
+It is further subdivided in the following knowledge units: 
+Functions, Relations and Sets, Basic Logic, Proof Techniques, Basics of Counting, Graphs and Trees, Discrete Probability.
+
+From this list of topics, Graphs and Trees were excluded from being accounted since it is difficult differentiate graphs courses that have a mathematical focus from courses that have an algorithmic focus.
+
+Also, advanced mathematics such as calculus, differential equations, and linear algebra were not accounted. The work assumes that students have acquired the needed mathematical background elsewhere. 
+
+About the CR2005, it is divided in 6 areas like Mathematics, Computing Fundamentals, Computing Technologies, etc.
 
 =================================================
 
+The definition of what is mathematics is well suited to this paper since it represents all the topics usually seen in a CS program.
 
+These topics are described here:
+
+Calculus
+Linear Algebra
+Geometry
+Set Theory
+Algebra
+Discrete mathematics
+Probability
+Statistics
 
 =================================================
 
+Now I'd like to talk about the process of selection of the studied CS programs.
 
+According to the Brazilian Ministry of Education, there are at least 354 CS programs. Of those, 258 private and 96 public.
+
+The methodology for this ranking has the following process: 
+
+The `Guia do Estudante' office contacts yearly all universities in Brazil to catalog all undergraduate programs that will be accepting new students for the next year.
+
+Are considered for ranking programs that grant a bachelor's degree, are at least two years old and are in-class. After this step, the office contacts the courses coordinators in order to ask them to fulfill an online questionnaire containing 15 specific questions about the program.
+
+Among the topics covered are themes relative to the faculty, scientific production and physical installations. The questionnaires are not graded, only are made available to a group of peer reviewers to help in their grading process.
+
+Even if a program does not fulfill the questionnaire it will be graded.
+
+The survey has a group of peer reviewers composed of course coordinators, directors of departments and teachers. They are responsible for evaluating the programs on a scale ranging from 5 (excellent) to 1 (poor) and ``prefer not to opine''.
+
+Each peer reviewer assesses a maximum of 30 randomly chosen programs, preferably in the region where he teaches and excluded those programs from his institution. Each program receives grades from six consultants, the best and worst being excluded.
+
+The final score is the average of the four intermediate ones. The process has technical consultancy from Ibope Inteligência and is audited by PricewaterhouseCoopers.
+
+=================================================
+
+In the map of Brazil we can see the geographical distribution of the selected CS programs.
+
+Most of them are in the coast, as it is where most of the Brazilian population live.
+
+The southeast, being the wealthiest of the regions of Brazil concentrates 5 of the 11 programs, 3 other programs are in the south and 3 in the northeast.
+
+=================================================
+
+This first table presents some basic information on the programs researched.
+
+Here we can see how there is a concentration of public universities in the ranking, partially because of the prestige that those instiutions have in Brazil.
+
+Also, all universities are 
 
 =================================================
 
